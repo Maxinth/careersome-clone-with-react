@@ -1,0 +1,110 @@
+.nav {
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  border-bottom: 1px solid rgb(218, 215, 215);
+  transition: padding 0.5s;
+}
+
+.nav__header__mobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__headerLargerScreens {
+  display: none;
+}
+.nav__menuIcon {
+  font-size: 2rem !important;
+}
+
+.nav__logo {
+  display: inline-block;
+  margin-left: 1.5rem;
+  transition: margin-left 0.5s linear;
+}
+
+.nav__logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (min-width: 400px) {
+  .nav__logo {
+    margin-left: calc(1.5rem + 30vw);
+  }
+
+  .nav__header__mobile {
+    justify-content: unset;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nav {
+    padding: 0 1.5rem;
+  }
+  .nav__header__mobile {
+    display: none;
+  }
+
+  .nav__headerLargerScreens {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav__logo {
+    margin-left: -2rem;
+    position: relative;
+    z-index: 100;
+  }
+
+  .nav__items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex: 1;
+    width: 100%;
+    position: relative;
+    /* margin-left: -2rem; */
+  }
+
+  .nav__listItem {
+    transition: background 0.3s, opacity 0s, transform 0.9s;
+    background-color: transparent;
+  }
+
+  .nav__listItem.isHidden {
+    /* display: none; */
+    transform: translateY(-70px);
+    opacity: 0;
+    position: absolute;
+  }
+
+  .nav__listItem.isShown {
+    transition: all 1.5s linear;
+    position: relative;
+  }
+
+  .nav__listItem:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .nav__itemLink {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    padding: 1rem 0.9rem;
+    font-weight: 700;
+    /* min-width: 100px; */
+  }
+  .nav__listItem:not(:last-child) {
+    /* margin-right: 0.5rem; */
+    font-size: 1.1rem;
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    color: red;
+  }
+}
