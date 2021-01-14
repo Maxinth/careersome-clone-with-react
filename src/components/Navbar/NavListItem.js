@@ -10,7 +10,9 @@ const NavListItem = ({ itemName, showItem }) => {
       : "isShown";
   return (
     <li className={`nav__listItem ${showItem && hideItem}`}>
-      <Link className="nav__itemLink">{itemName}</Link>
+      <Link to="/" className="nav__itemLink">
+        {itemName}
+      </Link>
     </li>
   );
 };
