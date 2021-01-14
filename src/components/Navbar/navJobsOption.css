@@ -26,20 +26,14 @@
   font-weight: 800;
 }
 
-@media (min-width: 551px) {
+@media (min-width: 569px) {
   .navJobOptions {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .navJobRight {
-    display: flex;
-    /* flex: 1; */
-  }
+
   .navJobOptions__listItem:first-child {
-    /* margin-left: -2.5rem; */
-    /* position: relative;
-    left: -120px; */
     border-right: 1px solid #fff;
   }
 

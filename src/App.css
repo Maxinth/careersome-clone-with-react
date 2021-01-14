@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+svg {
+  cursor: pointer;
+}
+
 ul,
 li {
   list-style-type: none;
