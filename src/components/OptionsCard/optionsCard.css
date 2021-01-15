@@ -1,0 +1,114 @@
+.optionsCard {
+  width: 100%;
+  /* margin: 0rem 2rem; */
+  max-width: 527px;
+  min-width: 100px;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  /* background-color: yellow; */
+  font-family: "Raleway", sans-serif;
+  /* border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px; */
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: (0, 0, 0, 0.14) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px;
+}
+
+.optionsCard__viewContainer {
+  /* overflow: hidden; */
+  transition: transform 0.4s;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+.optionsCard__initialView {
+  transition: transform 0.2s, opacity 0s;
+  display: block;
+  opacity: 1;
+  /* visibility: visible; */
+  height: 100%;
+}
+
+.optionsCard.cardSwitched {
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  flex-direction: column;
+  overflow: visible;
+  /* height: auto !important; */
+}
+.optionsCard.cardSwitched .optionsCard__initialView {
+  transform: translateY(-100%);
+  opacity: 0;
+  /* height: 0px !important; */
+}
+
+.optionsCard.cardSwitched .optionsCard__viewContainer {
+  transform: translateY(-100%);
+}
+
+.optionsCard.cardSwitched .optionsCard__moreInfo {
+  display: block;
+  width: 100%;
+  /* transform: translateY(2vh); */
+  padding: 1rem 2rem;
+  position: relative;
+  opacity: 1;
+  visibility: 1;
+  z-index: 120;
+  overflow: auto;
+  overflow-x: hidden;
+  /* text-overflow: ellipsis; */
+  height: 0px;
+}
+.optionsCard__img {
+  object-fit: contain;
+  display: block;
+  width: 100%;
+}
+
+.optionsCard__title,
+.optionsCard__category {
+  padding: 1rem 2rem;
+}
+
+.optionsCard__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.optionsCard__category {
+  color: #daa520;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.optionsCard__moreInfo {
+  width: 100%;
+  opacity: 0;
+  visibility: 0;
+  transition: transform 0.4s ease-in-out;
+  /* background: red; */
+  /* display: none; */
+}
+
+/* .optionsCard:hover .optionsCard__moreInfo {
+  transform: translateY(-100%);
+} */
+
+.optionsCard__infoTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.optionsCard__infoText {
+  margin-top: 1rem;
+  font-family: "Open Sans", sans-serif;
+  padding-bottom: 1rem;
+}

@@ -2,7 +2,7 @@
   /* padding: 0 1rem; */
   width: 100%;
   font-family: "Open Sans", sans-serif;
-  /* margin-top: 2rem; */
+  /* margin-top: 1rem; */
 }
 
 .heroSection__main {
@@ -10,6 +10,7 @@
   text-align: center;
   padding: 1rem;
   transition: margin-top 0.4s;
+  margin-top: 2rem;
 }
 
 .heroSection__title {
