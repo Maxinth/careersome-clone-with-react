@@ -30,6 +30,14 @@
   text-align: center;
 }
 
+.nav__sideBarBackdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+}
 @media (min-width: 400px) {
   .nav__logo {
     margin-left: calc(1.5rem + 30vw);
@@ -53,6 +61,9 @@
     justify-content: space-between;
     align-items: center;
   }
+  .nav__sideBarBackdrop {
+    display: none;
+  }
   .nav__logo {
     margin-left: -2rem;
     position: relative;
@@ -71,7 +82,7 @@
 
   .nav__listItem {
     transition: background 0.3s, opacity 0s, transform 0.9s;
-    background-color: transparent;
+    /* background-color: transparent; */
   }
 
   .nav__listItem.isHidden {

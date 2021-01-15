@@ -15,3 +15,7 @@ ul,
 li {
   list-style-type: none;
 }
+
+.App {
+  position: relative;
+}

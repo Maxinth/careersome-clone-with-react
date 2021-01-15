@@ -1,10 +1,10 @@
 export default [
-  "home",
-  "about",
-  "careers",
-  "career path test",
-  "skills and attribute",
-  "sign up",
-  "login",
-  "blog",
+  "Home",
+  "About",
+  "Careers",
+  "Career Path Test",
+  "Skills and Attribute",
+  "Sign Up",
+  "Login",
+  "Blog",
 ];
