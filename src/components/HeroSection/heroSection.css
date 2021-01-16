@@ -3,6 +3,10 @@
   width: 100%;
   font-family: "Open Sans", sans-serif;
   /* margin-top: 1rem; */
+  background-image: url("../../assets/wave-white.png");
+  /* background-position: center; */
+  background-repeat: repeat-x;
+  background-size: cover;
 }
 
 .heroSection__main {
@@ -76,6 +80,8 @@
   .heroSection {
     display: flex;
     justify-content: space-between;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 
   .heroSection__imgContainer {

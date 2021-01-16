@@ -47,7 +47,7 @@ const OptionsCard = () => {
         {/* moreInfo */}
         <section
           className="optionsCard__moreInfo"
-          style={{ height: `${(3.5 * moreInfoHeight) / 5}px` }}
+          style={{ height: `${(3.5 * moreInfoHeight) / 6}px` }}
         >
           <div className="optionsCard__infoTitle">
             <span className="optionsCard__heading">Career Overview</span>
