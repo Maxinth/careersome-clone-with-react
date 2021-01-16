@@ -14,6 +14,7 @@
   position: relative;
   box-shadow: (0, 0, 0, 0.14) 0px 2px 2px 0px,
     rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px;
+  /* z-index: 230; */
 }
 
 .optionsCard__viewContainer {
@@ -23,12 +24,27 @@
   flex-direction: column; */
 }
 
+@keyframes initialView {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 .optionsCard__initialView {
-  transition: transform 0.2s, opacity 0s;
+  transition: transform 0.3s, opacity 0.2s;
   display: block;
   opacity: 1;
-  /* visibility: visible; */
+  visibility: visible;
   height: 100%;
+  /* animation: initialView 0.2s ease-in-out; */
+  /* animation-d */
 }
 
 .optionsCard.cardSwitched {
@@ -37,16 +53,26 @@
   align-items: center; */
   flex-direction: column;
   overflow: visible;
+  /* margin-bottom: 6rem; */
   /* height: auto !important; */
+}
+
+.optionsCard.cardSwitched + .optionsCard {
+  margin-top: 6rem;
 }
 .optionsCard.cardSwitched .optionsCard__initialView {
   transform: translateY(-100%);
   opacity: 0;
+  visibility: hidden;
+  /* display: none; */
+  /* animation: initialView 0.2s ease-in-out; */
+
   /* height: 0px !important; */
 }
 
 .optionsCard.cardSwitched .optionsCard__viewContainer {
   transform: translateY(-100%);
+  /* visibility: hidden; */
 }
 
 .optionsCard.cardSwitched .optionsCard__moreInfo {

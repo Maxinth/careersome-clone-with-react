@@ -1,10 +1,10 @@
 import React, { useState, useRef, useEffect } from "react";
-import testImg from "../../assets/project1.jpg";
+// import testImg from "../../assets/project1.jpg";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import "./optionsCard.css";
 import CloseIcon from "@material-ui/icons/Close";
 
-const OptionsCard = () => {
+const OptionsCard = ({ optionsImg, text, infoText }) => {
   const initialViewRef = useRef();
   //   let initialViewHeight = initialViewRef.current.clientHeight;
   const [cardHeight, setCardHeight] = useState("auto");
@@ -36,39 +36,32 @@ const OptionsCard = () => {
           ref={initialViewRef}
           // style={{ height: `${switchCard ? 0 : cardHeight}px` }}
         >
-          <img src={testImg} alt="options card" className="optionsCard__img" />
+          <img
+            src={optionsImg}
+            alt="options card"
+            className="optionsCard__img"
+          />
           <div className="optionsCard__title">
-            <span className="optionsCard__text">Internships in Nigeria </span>
+            <span className="optionsCard__text">{text}</span>
             <MoreVertIcon onClick={toggleCard} />
           </div>
-          <p className="optionsCard__category">Internships in Nigeria</p>
+          <p className="optionsCard__category">{text}</p>
         </div>
 
         {/* moreInfo */}
         <section
           className="optionsCard__moreInfo"
           style={{ height: `${(3.5 * moreInfoHeight) / 6}px` }}
+          // style={{ height: `${switchCard ? "unset" : "0px"}` }}
         >
           <div className="optionsCard__infoTitle">
-            <span className="optionsCard__heading">Career Overview</span>
+            <span className="optionsCard__heading">{text}</span>
             <CloseIcon
               className="optionsCard__closeIcon"
               onClick={toggleCard}
             />
           </div>
-          <p className="optionsCard__infoText">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-            accusantium ea qui placeat, eum, pariatur neque aliquam voluptates
-            eius unde voluptas atque repudiandae, perferendis itaque architecto!
-            Architecto, expedita. Debitis voluptas consectetur enim! Dolorem
-            eaque aut cumque voluptatem! Ad maiores dolore nostrum ea aliquid
-            itaque nemo, quod, placeat quas error quis odio? Quasi, cupiditate
-            optio eius illo enim totam rerum doloremque. Laudantium voluptate
-            maxime quas. Iure, beatae reprehenderit vel, nostrum, expedita
-            delectus consectetur optio dolore explicabo atque velit tempore
-            praesentium sint cumque quos. Quisquam deserunt commodi minus
-            corporis cumque..
-          </p>
+          <p className="optionsCard__infoText">{infoText}</p>
         </section>
       </section>
     </section>
