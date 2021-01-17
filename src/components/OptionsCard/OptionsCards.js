@@ -6,6 +6,7 @@ import data from "./cardsData";
 const OptionsCards = () => {
   return (
     <section className="optionsCards">
+      <h3 className="optionsCards__title">Main Features</h3>
       <div className="optionsCards__container">
         {data.map((item) => (
           <OptionsCard key={item.text} {...item} />
