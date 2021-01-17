@@ -5,11 +5,13 @@ import data from "./cardsData";
 
 const OptionsCards = () => {
   return (
-    <div className="optionsCards">
-      {data.map((item) => (
-        <OptionsCard key={item.text} {...item} />
-      ))}
-    </div>
+    <section className="optionsCards">
+      <div className="optionsCards__container">
+        {data.map((item) => (
+          <OptionsCard key={item.text} {...item} />
+        ))}
+      </div>
+    </section>
   );
 };
 

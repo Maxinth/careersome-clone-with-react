@@ -1,3 +1,32 @@
 .optionsCards {
+  background-color: #fff;
   padding: 1rem 2rem;
+}
+
+.optionsCards__container {
+  margin-top: 2rem;
+}
+
+@media (min-width: 500px) {
+  .optionsCards__container .optionsCard {
+    max-width: unset;
+    min-width: unset;
+  }
+
+  .optionsCards__container .optionsCard.cardSwitched + .optionsCard {
+    margin-top: unset;
+  }
+  .optionsCards__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+  }
+}
+
+@media (min-width: 894px) {
+  .optionsCards__container {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }

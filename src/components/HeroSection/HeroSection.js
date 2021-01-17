@@ -7,7 +7,7 @@ const HeroSection = () => {
       <section className="heroSection__main">
         <h3 className="heroSection__title">Welcome to Careersome</h3>
         <p className="heroSection__text">
-          Careersome exist to help young Nigerians make smart, well-informed
+          Careersome exists to help young Nigerians make smart, well-informed
           decisions about their careers and enter into the labour market
         </p>
         <div className="heroSection__btnContainer">

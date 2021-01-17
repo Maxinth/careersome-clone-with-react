@@ -4,7 +4,7 @@ import MoreVertIcon from "@material-ui/icons/MoreVert";
 import "./optionsCard.css";
 import CloseIcon from "@material-ui/icons/Close";
 
-const OptionsCard = ({ optionsImg, text, infoText }) => {
+const OptionsCard = ({ optionsImg, text, infoText, secondParagraph }) => {
   const initialViewRef = useRef();
   //   let initialViewHeight = initialViewRef.current.clientHeight;
   const [cardHeight, setCardHeight] = useState("auto");
@@ -26,7 +26,12 @@ const OptionsCard = ({ optionsImg, text, infoText }) => {
   return (
     <section
       className={`optionsCard ${isCardSwitched}`}
-      style={{ height: switchCard ? `${cardHeight / 2}px` : "unset" }}
+      style={{ height: switchCard ? `${cardHeight / 2}px` : "auto" }}
+
+      // style={{
+      //   height: `${cardHeight}px`,
+      // }}
+
       //   style={{ height: switchCard ? "unset" : "unset" }}
     >
       <section className="optionsCard__viewContainer">
@@ -51,7 +56,7 @@ const OptionsCard = ({ optionsImg, text, infoText }) => {
         {/* moreInfo */}
         <section
           className="optionsCard__moreInfo"
-          style={{ height: `${(3.5 * moreInfoHeight) / 6}px` }}
+          style={{ height: `${(5.75 * moreInfoHeight) / 6}px` }}
           // style={{ height: `${switchCard ? "unset" : "0px"}` }}
         >
           <div className="optionsCard__infoTitle">
@@ -62,6 +67,9 @@ const OptionsCard = ({ optionsImg, text, infoText }) => {
             />
           </div>
           <p className="optionsCard__infoText">{infoText}</p>
+          {secondParagraph && (
+            <p className="optionsCard__secondParagraph">{secondParagraph}</p>
+          )}
         </section>
       </section>
     </section>

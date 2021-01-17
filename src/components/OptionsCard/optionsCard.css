@@ -11,10 +11,18 @@
   border-bottom-right-radius: 20px; */
   height: 100%;
   overflow: hidden;
-  position: relative;
-  box-shadow: (0, 0, 0, 0.14) 0px 2px 2px 0px,
-    rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px;
-  /* z-index: 230; */
+  transition: all 0.3s ease-in;
+  transition: box-shadow 0.4s ease-in-out, transform 0.3;
+  /* position: relative; */
+  /* box-shadow: (0, 0, 0, 0.14) 0px 2px 2px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px; */
+  box-shadow: 1px 3px 3px grey;
+  /* margin-top: 2rem; */
+}
+
+.optionsCard:hover {
+  box-shadow: 1px 3px 10px grey;
+  transform: scale(1.03);
 }
 
 .optionsCard__viewContainer {
@@ -24,19 +32,6 @@
   flex-direction: column; */
 }
 
-@keyframes initialView {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
 .optionsCard__initialView {
   transition: transform 0.3s, opacity 0.2s;
   display: block;
@@ -53,17 +48,33 @@
   align-items: center; */
   flex-direction: column;
   overflow: visible;
+
   /* margin-bottom: 6rem; */
   /* height: auto !important; */
 }
 
 .optionsCard.cardSwitched + .optionsCard {
-  margin-top: 6rem;
+  margin-top: 16rem;
+}
+
+.optionsCard.cardSwitched + .optionsCard.cardSwitched + .optionsCard,
+.optionsCard.cardSwitched
+  + .optionsCard.cardSwitched
+  + .optionsCard
+  + .optionsCard,
+.optionsCard.cardSwitched
+  + .optionsCard.cardSwitched
+  + .optionsCard.cardSwitched
+  + .optionsCard.cardSwitched
+  + .optionsCard
+  + .optionsCard {
+  margin-top: 10rem;
 }
 .optionsCard.cardSwitched .optionsCard__initialView {
   transform: translateY(-100%);
   opacity: 0;
   visibility: hidden;
+
   /* display: none; */
   /* animation: initialView 0.2s ease-in-out; */
 
@@ -71,23 +82,31 @@
 }
 
 .optionsCard.cardSwitched .optionsCard__viewContainer {
-  transform: translateY(-100%);
+  /* transform: translateY(-100%); */
   /* visibility: hidden; */
+  position: relative;
 }
 
 .optionsCard.cardSwitched .optionsCard__moreInfo {
   display: block;
   width: 100%;
   /* transform: translateY(2vh); */
-  padding: 1rem 2rem;
-  position: relative;
+  padding: 1rem 1rem;
+  padding-bottom: 0;
+  /* padding-top: 0rem; */
+  position: absolute;
+  top: 10px;
+  /* bottom: 0; */
+  left: 0;
+  right: 0;
   opacity: 1;
   visibility: 1;
-  z-index: 120;
+  z-index: 10;
   overflow: auto;
   overflow-x: hidden;
   /* text-overflow: ellipsis; */
   height: 0px;
+  box-shadow: 1px 3px 5px grey;
 }
 .optionsCard__img {
   object-fit: contain;
@@ -97,7 +116,7 @@
 
 .optionsCard__title,
 .optionsCard__category {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
 }
 
 .optionsCard__title {
@@ -105,6 +124,7 @@
   justify-content: space-between;
   align-items: center;
   font-weight: 700;
+  /* padding: 1rem 0.5rem; */
 }
 
 .optionsCard__category {
@@ -112,13 +132,15 @@
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 0.9rem;
+  /* text-align: center; */
 }
 
 .optionsCard__moreInfo {
   width: 100%;
   opacity: 0;
   visibility: 0;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, opacity 0s ease-out,
+    position 1.4s linear, box-shadow 0.3s ease-in;
   /* background: red; */
   background-color: #fff;
   /* display: none; */
@@ -134,15 +156,88 @@
   justify-content: space-between;
 }
 
-.optionsCard__infoText {
+.optionsCard__infoText,
+.optionsCard__secondParagraph {
   margin-top: 1rem;
   font-family: "Open Sans", sans-serif;
   padding-bottom: 1rem;
   overflow: auto;
+  color: rgb(119, 119, 119);
+  font-size: 0.9rem;
+  font-weight: 500;
+  /* text-align: justify; */
   /* background-color: #fff; */
 }
 
 .optionsCard__heading {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
+}
+
+@media (min-width: 684px) {
+  .optionsCard.cardSwitched + .optionsCard.cardSwitched + .optionsCard,
+  .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard
+    + .optionsCard,
+  .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard
+    + .optionsCard {
+    margin-top: unset;
+  }
+}
+
+@media (min-width: 686px) {
+  .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard,
+  .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard
+    + .optionsCard,
+  .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard
+    + .optionsCard
+    + .optionsCard,
+  .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard
+    + .optionsCard {
+    margin-top: 10rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard,
+  .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard
+    + .optionsCard,
+  .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard
+    + .optionsCard
+    + .optionsCard,
+  .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard.cardSwitched
+    + .optionsCard
+    + .optionsCard {
+    margin-top: 11rem;
+  }
 }
