@@ -1,6 +1,6 @@
 export default [
   {
-    testimony: `So I got wind of this platform via its telegram page which I am currently a member of.
+    testimony: `So I got wind of this platform via its telegram channel which I am currently a member of.
     If there is one thing I like about this platform, its the FREE CV reviews the admin and a couple of
     wonderful members do on a regular basis. This, in no small way, has given me an insight on how to structure
     my CV with hard and soft skills, how and where the said skills should be structured. So, Yes, I approve and 

@@ -28,6 +28,7 @@
   text-align: right;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  align-self: flex-end;
 }
 
 .testimonial.activeSlide {

@@ -4,6 +4,7 @@
   background-color: #fff;
   margin-bottom: 2rem;
   margin-top: 14rem;
+  transition: margin 0.3s ease-in-out;
 }
 
 .testimonials__title {
@@ -13,7 +14,7 @@
   font-weight: 900;
   margin-bottom: 1rem;
   font-family: "Open Sans", sans-serif;
-  color: green;
+  color: #333;
 }
 .testimonials__circleControls {
   display: flex;

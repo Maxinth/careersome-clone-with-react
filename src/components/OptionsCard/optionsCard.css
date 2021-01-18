@@ -90,7 +90,7 @@
 .optionsCard.cardSwitched .optionsCard__moreInfo {
   display: block;
   width: 100%;
-  /* transform: translateY(2vh); */
+  transform: rotateX(360deg);
   padding: 1rem 1rem;
   padding-bottom: 0;
   /* padding-top: 0rem; */
@@ -112,8 +112,13 @@
   object-fit: contain;
   display: block;
   width: 100%;
+  opacity: 0.9;
+  transition: opacity 0.2s;
 }
 
+.optionsCard:hover .optionsCard__img {
+  opacity: 1;
+}
 .optionsCard__title,
 .optionsCard__category {
   padding: 1rem 1rem;
@@ -139,10 +144,11 @@
   width: 100%;
   opacity: 0;
   visibility: 0;
-  transition: transform 0.4s ease-in-out, opacity 0s ease-out,
-    position 1.4s linear, box-shadow 0.3s ease-in;
+  transition: transform 0.5s ease-in-out, opacity 0s ease-in-out,
+    position 0.1s ease-in, box-shadow 0.3s ease-in;
   /* background: red; */
   background-color: #fff;
+  transform: rotateX(270deg);
   /* display: none; */
 }
 
