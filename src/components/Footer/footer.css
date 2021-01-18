@@ -1,0 +1,125 @@
+.footer {
+  width: 100%;
+}
+
+.footer__container {
+  padding: 1rem 2rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.footer__mainTitle {
+  color: rgb(218, 165, 32);
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+.footer__some {
+  color: #fff;
+}
+
+.footer__mainText {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer__useFulLinks__text {
+  color: #fff;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+.footer__useFulLinksContainer {
+  width: 100%;
+  height: 100%;
+  margin-top: 3rem;
+}
+.footer__useFulLink {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.footer__useFulListItem {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.footer__useFulItemLink {
+  color: rgb(218, 165, 32);
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  transition: font-weight 0.2s ease-in-out;
+  /* padding: 0.5rem; */
+}
+.footer__useFulListItem:hover .footer__useFulItemLink {
+  font-weight: 700;
+}
+
+/* FOOTER CONTACT */
+
+.footer__contact {
+  width: 100%;
+  text-align: center;
+}
+
+.footer__contactTitle {
+  /* text-align: center; */
+  margin-bottom: 2rem;
+}
+
+.footer__Text {
+  font-weight: 800;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.8rem;
+}
+
+.footer__social {
+  margin-top: 1rem;
+}
+.footer__clone {
+  color: yellow;
+}
+
+.footer__socialText {
+  font-size: 0.9rem;
+  font-weight: 900;
+}
+
+.footer__icon.heart {
+  font-size: 1rem !important;
+  margin: 0 0.2rem;
+  margin-top: 0.3rem;
+  color: red;
+}
+
+.footer__socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__socialIcons .footer__icon {
+  font-size: 2.5rem !important;
+}
+
+.footer__icon.mail {
+  color: rgb(218, 165, 32);
+}
+
+@media (min-width: 590px) {
+  .footer__useFulLinkContainer {
+    display: flex;
+  }
+}
+
+/* @media (min-width: 1000px) {
+  .footer__container {
+    display: flex;
+    
+    justify-content: space-between;
+  }
+} */
