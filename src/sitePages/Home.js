@@ -8,7 +8,7 @@ import { useVariants } from "../components/useVariants";
 const Home = () => {
   const { variantProps, pageVariant } = useVariants();
   return (
-    <motion.section className="home" variants={pageVariant} {...variantProps}>
+    <motion.section className="home" variants={pageVariant(2)} {...variantProps}>
       <HeroSection />
       <OptionsCards />
       <Testimonials />

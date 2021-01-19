@@ -7,7 +7,11 @@ import { useVariants } from "../useVariants";
 const AboutContainer = () => {
   const { aboutBlockContainer, variantProps, pageVariant } = useVariants();
   return (
-    <motion.section className="about" variants={pageVariant} {...variantProps}>
+    <motion.section
+      className="about"
+      variants={pageVariant(2)}
+      {...variantProps}
+    >
       <div className="about__container">
         <h1 className="about__heading">
           About <span className="about__headingSome">Career</span>some

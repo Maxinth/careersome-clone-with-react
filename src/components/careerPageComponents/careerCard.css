@@ -5,6 +5,11 @@
   margin: 4rem 0;
   position: relative;
   box-shadow: -1px 5px 10px #333;
+  transition: transform 0.3s ease-out;
+}
+
+.careerCard:hover {
+  transform: scale(1.05);
 }
 
 .careerCard__container {
@@ -19,6 +24,7 @@
 .careerCard__title {
   color: #fff;
   font-size: 0.8rem;
+  /* margin-top: 2rem; */
 }
 .careerCard__btn,
 .careerCard__addBtn {
@@ -32,7 +38,7 @@
   font-size: 0.9rem;
   border: none;
   font-family: "Raleway", sans-serif;
-  margin-top: 1rem;
+  margin-top: 2rem;
   cursor: pointer;
 }
 

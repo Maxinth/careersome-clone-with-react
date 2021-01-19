@@ -6,4 +6,14 @@ export default {
     "Building and Construction",
     "Business and Finance",
   ],
+
+  pageTwoCards: [
+    "Education and Social sciences",
+    "Engineering",
+    "Healthcare",
+    "Hospitality",
+    "Law and Security",
+  ],
+
+  pageThreeCards: ["Media and Performing Arts", "Technology", "Transport"],
 };

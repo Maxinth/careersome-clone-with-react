@@ -29,13 +29,44 @@
 }
 
 .career__page {
-  background: #333;
-  color: #fff;
+  background: rgb(202, 202, 204);
+  color: #333;
   font-weight: 900;
   padding: 0.5rem 0.7rem;
   font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
+  border-radius: 50px;
+}
+
+.career__page:hover {
+  background-color: rgb(129, 127, 127);
+  color: ghostwhite;
+}
+.career__page.current {
+  background: #333;
+  color: #fff;
 }
 
 .career__page:not(:last-child) {
   margin-right: 0.5rem;
+}
+
+.career__cards {
+  margin: 3rem 0;
+  /* border: thin solid rgb(248, 242, 242); */
+  padding: 2rem 2rem;
+  /* background: ghostwhite; */
+}
+
+@media (min-width: 500px) {
+  .career__cards {
+    display: grid;
+    grid-gap: 30px 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .career__cards .careerCard {
+    margin: unset;
+  }
 }

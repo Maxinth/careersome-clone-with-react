@@ -33,20 +33,22 @@ const aboutBlockContainer = {
   },
 };
 
-const pageVariant = {
-  hidden: {
-    opacity: 0,
-  },
-
-  visible: {
-    opacity: 1,
-    transition: {
-      type: "tween",
-      duration: 2,
-      delay: 0.2,
+const pageVariant = (duration = 2) => {
+  return {
+    hidden: {
+      opacity: 0,
     },
-  },
+
+    visible: {
+      opacity: 1,
+      transition: {
+        type: "tween",
+        duration: duration,
+      },
+    },
+  };
 };
+
 // custom Hook to export the variants as needed
 export const useVariants = () => {
   return { variantProps, landRVariant, aboutBlockContainer, pageVariant };
