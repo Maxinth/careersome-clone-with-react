@@ -20,6 +20,6 @@ export default [
         helping students with useful information and scholarship links. So I
         encourage everyone looking for a scholarship in Nigeria to visit
         careersome.com everyday! Yes everyday!`,
-    owner: "Daborah Okon",
+    owner: "Deborah Okon",
   },
 ];

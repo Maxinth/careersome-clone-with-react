@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const NavListItem = ({ itemName }) => {
+const NavListItem = ({ linkText, linkRef }) => {
   // const hideItem =
   //   itemName === "skills and attribute" ||
   //   itemName === "sign up" ||
@@ -9,13 +9,9 @@ const NavListItem = ({ itemName }) => {
   //     ? "isHidden"
   //     : "isShown";
   return (
-    <li
-      className={`nav__listItem 
-    
-    `}
-    >
-      <Link to="/" className="nav__itemLink">
-        {itemName}
+    <li className="nav__listItem">
+      <Link to={linkRef} className="nav__itemLink">
+        {linkText}
       </Link>
     </li>
   );

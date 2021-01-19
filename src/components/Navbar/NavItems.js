@@ -6,7 +6,7 @@ const NavItems = () => {
   return (
     <>
       {data.map((item) => (
-        <NavListItem key={item} itemName={item} />
+        <NavListItem key={item.linkText} {...item} />
       ))}
     </>
   );

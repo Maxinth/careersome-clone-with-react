@@ -8,8 +8,8 @@ const OptionsCards = () => {
     <section className="optionsCards">
       <h3 className="optionsCards__title">Main Features</h3>
       <div className="optionsCards__container">
-        {data.map((item) => (
-          <OptionsCard key={item.text} {...item} />
+        {data.map((item, index) => (
+          <OptionsCard key={item.text} {...item} cardIndex={index} />
         ))}
       </div>
     </section>
