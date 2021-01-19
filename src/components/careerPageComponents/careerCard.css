@@ -1,0 +1,47 @@
+.careerCard {
+  background-color: #546e7a;
+  border-radius: 7px;
+  font-family: "Open Sans", sans-serif;
+  margin: 4rem 0;
+  position: relative;
+  box-shadow: -1px 5px 10px #333;
+}
+
+.careerCard__container {
+  padding: 3rem 2rem;
+}
+.careerCard__mainTitle {
+  color: #ffeb3b;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.careerCard__title {
+  color: #fff;
+  font-size: 0.8rem;
+}
+.careerCard__btn,
+.careerCard__addBtn {
+  padding: 0.4rem 2rem;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 20px;
+  outline: none;
+  font-size: 0.9rem;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.careerCard__addBtn {
+  border-radius: 100px;
+  padding: 0.5rem;
+  background-color: rgb(250, 28, 28);
+  position: absolute;
+  bottom: -20px;
+  right: 40px;
+  margin-top: unset;
+}

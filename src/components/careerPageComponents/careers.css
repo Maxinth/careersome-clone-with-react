@@ -1,0 +1,41 @@
+.career {
+  padding: 2rem;
+  font-family: "Open Sans", sans-serif;
+  color: rgb(119, 119, 119);
+}
+
+.career__container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.career__heading {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.career__text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.career__pagination,
+.career__page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+}
+
+.career__page {
+  background: #333;
+  color: #fff;
+  font-weight: 900;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+}
+
+.career__page:not(:last-child) {
+  margin-right: 0.5rem;
+}

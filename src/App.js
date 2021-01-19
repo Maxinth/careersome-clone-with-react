@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { Switch, Route } from "react-router-dom";
 import Home from "./sitePages/Home";
 import About from "./sitePages/About";
+import Careers from "./sitePages/Careers";
 
 function App() {
   return (
@@ -18,6 +19,10 @@ function App() {
 
         <Route path="/about">
           <About />
+        </Route>
+
+        <Route path="/careers">
+          <Careers />
         </Route>
       </Switch>
       <Footer />
