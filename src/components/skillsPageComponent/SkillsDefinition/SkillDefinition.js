@@ -1,10 +1,17 @@
 import React, { useState } from "react";
 import "./skillDefinition.css";
 import SkillDefinitionSocial from "./SkillDefinitionSocial";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useVariants } from "../../useVariants";
 
-const SkillDefinition = () => {
+const SkillDefinition = ({
+  title,
+  firstText,
+  secondText,
+  howToTexts,
+  infoText,
+  referenceList = [],
+}) => {
   const [view, setView] = useState(false);
   const toggleView = () => setView(!view);
   const { variantProps, pageVariant } = useVariants();
@@ -14,7 +21,7 @@ const SkillDefinition = () => {
         <div className="skillDefinition__cardMain">
           <section className="skillDefinition__cardMainContainer">
             <h1 className="skillDefinition__title">
-              {!view ? "What is Adaptability" : "How to be more Adaptable"}
+              {!view ? `What is ${title}` : `How to  ${infoText}`}
             </h1>
 
             {!view && (
@@ -22,20 +29,12 @@ const SkillDefinition = () => {
                 className="skillDefinition__body"
                 variants={pageVariant()}
               >
-                <p className="skillDefinition__text">
-                  Adaptability means being able to adjust easily to new
-                  circumstances and environments. An adaptable person is one who
-                  keeps an open and positive mind, who is ready for new
-                  challenges, who stays calm and composed in the face of
-                  difficulties, who continues steadily despite problems or
-                  difficulties, who recovers quickly from setbacks, etc.
-                </p>
-                <p className="skillDefinition__text">
-                  it’s important that you learn how to become more adaptable, as
-                  developing the quality will help you respond well to change,
-                  uncertainty and crisis. Below are some tips on how to be more
-                  adaptable.
-                </p>
+                {firstText && (
+                  <p className="skillDefinition__text">{firstText}</p>
+                )}
+                {secondText && (
+                  <p className="skillDefinition__text">{secondText}</p>
+                )}
               </motion.div>
             )}
           </section>
@@ -49,29 +48,11 @@ const SkillDefinition = () => {
                 transition: { type: "tween", duration: 2 },
               }}
             >
-              <p className="skillDefinition__howToTexts">
-                have an optimistic, farsighted attitude so as to be able to
-                think ahead and stay positive while pushing through discomfort
-                or rough patches
-              </p>
-              <p className="skillDefinition__howToTexts">
-                develop the ability to control your impulsive feelings and
-                behaviors
-              </p>
-              <p className="skillDefinition__howToTexts">
-                avoid forming an opinion without enough thought or knowledge
-              </p>
-              <p className="skillDefinition__howToTexts">
-                be receptive to new ideas and concepts approach tasks, problems,
-                and situations with openness to alternatives have a honest and
-                balanced view of your own personality
-              </p>
-              <p className="skillDefinition__howToTexts">
-                show concern for the needs, wishes and feelings of others
-              </p>
-              <p className="skillDefinition__howToTexts">
-                have confidence in yourself and your own abilities
-              </p>
+              {howToTexts.map((item, index) => (
+                <p className="skillDefinition__howToTexts" key={index}>
+                  {item}
+                </p>
+              ))}
             </motion.section>
           )}
         </div>
@@ -80,7 +61,7 @@ const SkillDefinition = () => {
           className="skillDefinition__howTo"
           onClick={toggleView}
         >
-          {!view ? "How to be more Adaptable" : "Back to main view"}
+          {!view ? `How to  ${infoText}` : "Back to main view"}
         </button>
       </section>
 
@@ -90,13 +71,11 @@ const SkillDefinition = () => {
           References and Further Reading
         </h5>
         <div className="skillDefinition__referenceList">
-          <p className="skillDefinition__referenceItem">
-            University of Kent: Adaptability
-          </p>
-          <p className="skillDefinition__referenceItem">
-            TrainingZone: Adaptability - a key skill we must develop in
-            ourselves and in others
-          </p>
+          {referenceList.map((item, index) => (
+            <p className="skillDefinition__referenceItem" key={index}>
+              {item}
+            </p>
+          ))}
         </div>
 
         {/* SOCIAL MEDIA ICONS */}

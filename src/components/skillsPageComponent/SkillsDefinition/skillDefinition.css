@@ -50,6 +50,10 @@
   padding: 0.5rem 2rem;
 }
 
+.skillDefinition__howToTexts::first-letter {
+  text-transform: uppercase;
+}
+
 .skillDefinition__howTo {
   border: none;
   outline: none;

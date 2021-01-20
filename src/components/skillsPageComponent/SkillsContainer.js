@@ -1,7 +1,7 @@
 import React from "react";
 import "./skills.css";
 import data from "./data";
-import SkillDefinition from "./SkillsDefinition/SkillDefinition";
+import SkillDefinitions from "./SkillsDefinition/SkillDefinitions";
 const SkillsContainer = () => {
   return (
     <section className="skills">
@@ -20,7 +20,7 @@ const SkillsContainer = () => {
           ))}
         </ul>
       </div>
-      <SkillDefinition />
+      <SkillDefinitions />
     </section>
   );
 };
