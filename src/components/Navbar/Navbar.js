@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import logo from "../../assets/career2.png";
 import "./navbar.css";

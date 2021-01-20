@@ -4,23 +4,34 @@ import "./careerCard.css";
 import { motion } from "framer-motion";
 import { useVariants } from "../useVariants";
 
-const CareerCard = ({ itemName }) => {
-  const { pageVariant, variantProps } = useVariants();
+const CareerCard = ({ itemName, cardIndex }) => {
+  const { variantProps, pageVariant, cardHover } = useVariants();
+
   return (
     <motion.div
       className="careerCard"
-      variants={pageVariant(1)}
+      variants={pageVariant(2, (cardIndex + 1) * 0.5)}
       {...variantProps}
     >
       <div className="careerCard__container">
         <h3 className="careerCard__mainTitle">{itemName}</h3>
         <p className="careerCard__title">Careers in {itemName}</p>
-        <button className="careerCard__btn" type="button">
+        <motion.button
+          className="careerCard__btn"
+          type="button"
+          variants={cardHover}
+          whileHover="hover"
+        >
           view
-        </button>
-        <button className="careerCard__addBtn" type="button">
+        </motion.button>
+        <motion.button
+          className="careerCard__addBtn"
+          type="button"
+          variants={cardHover}
+          whileHover="hover"
+        >
           <AddIcon className="careerCard__addIcon" />
-        </button>
+        </motion.button>
       </div>
     </motion.div>
   );

@@ -1,18 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 const NavListItem = ({ linkText, linkRef }) => {
-  // const hideItem =
-  //   itemName === "skills and attribute" ||
-  //   itemName === "sign up" ||
-  //   itemName === "login" ||
-  //   itemName === "blog"
-  //     ? "isHidden"
-  //     : "isShown";
+  const location = useLocation();
+
+  const makeActiveLink = (currentPath) =>
+    location.pathname === currentPath ? "active" : "";
   return (
     <li className="nav__listItem">
-      <Link to={linkRef} className="nav__itemLink">
+      <NavLink
+        to={linkRef}
+        className="nav__itemLink"
+        activeClassName={makeActiveLink(linkRef)}
+      >
         {linkText}
-      </Link>
+      </NavLink>
     </li>
   );
 };

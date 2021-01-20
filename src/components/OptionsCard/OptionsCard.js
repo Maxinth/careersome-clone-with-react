@@ -3,10 +3,6 @@ import React, { useState, useRef, useEffect } from "react";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import "./optionsCard.css";
 import CloseIcon from "@material-ui/icons/Close";
-import { motion } from "framer-motion";
-import { useVariants } from "../useVariants";
-
-let direction;
 
 const OptionsCard = ({
   optionsImg,
@@ -23,23 +19,6 @@ const OptionsCard = ({
   const isCardSwitched = switchCard ? "cardSwitched" : "";
   const toggleCard = () => setSwitchCard(!switchCard);
 
-  const { landRVariant, variantProps } = useVariants();
-
-  switch (cardIndex.toString()) {
-    case "0":
-    case "1":
-    case "2":
-      direction = "-100vw";
-      break;
-    case "3":
-    case "4":
-    case "5":
-      direction = "100vw";
-      break;
-    default:
-      direction = "0vw";
-      break;
-  }
   useEffect(() => {
     let initialViewHeight = initialViewRef.current.clientHeight;
 
@@ -50,11 +29,10 @@ const OptionsCard = ({
   const moreInfoHeight = switchCard ? cardHeight : 0;
 
   return (
-    <motion.section
+    <section
       className={`optionsCard ${isCardSwitched}`}
       style={{ height: switchCard ? `${cardHeight / 2}px` : "auto" }}
-      {...variantProps}
-      variants={landRVariant(direction, 1)}
+
       // style={{
       //   height: `${cardHeight}px`,
       // }}
@@ -99,7 +77,7 @@ const OptionsCard = ({
           )}
         </section>
       </section>
-    </motion.section>
+    </section>
   );
 };
 

@@ -51,7 +51,12 @@
   padding: 1rem;
   padding-left: 2rem;
   color: #333;
-  transition: color 0.4s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.mobileSideBar .nav__itemLink.active {
+  color: rgb(250, 208, 102);
+  background-color: #333;
 }
 
 .mobileSideBar__backdrop {

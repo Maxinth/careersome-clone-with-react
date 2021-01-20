@@ -4,7 +4,7 @@ const GeneratePageCards = ({ pageNo }) => {
   return (
     <>
       {pageNo.map((item, index) => (
-        <CareerCard key={index} itemName={item} />
+        <CareerCard key={index} itemName={item} cardIndex={index} />
       ))}
     </>
   );

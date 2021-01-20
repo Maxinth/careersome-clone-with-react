@@ -70,3 +70,23 @@
     margin: unset;
   }
 }
+@media (min-width: 1200px) {
+  .career__cards {
+    display: flex;
+    /* justify-content: space-between; */
+  }
+  .career__cards .careerCard {
+    flex: 1;
+    /* padding: 0.1rem; */
+  }
+
+  .career__container {
+    max-width: 1300px;
+    /* padding: 1rem; */
+  }
+
+  .careerCard .careerCard__container {
+    padding: 1rem 1rem 1rem;
+    text-align: center;
+  }
+}

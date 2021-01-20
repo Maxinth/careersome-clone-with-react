@@ -1,9 +1,10 @@
 const variantProps = {
   initial: "hidden",
   animate: "visible",
+  hover: "hover",
 };
 
-const landRVariant = (direction, duration = 2) => {
+const landRVariant = (direction, delay) => {
   return {
     hidden: {
       x: direction,
@@ -12,7 +13,8 @@ const landRVariant = (direction, duration = 2) => {
       x: 0,
       transition: {
         type: "tween",
-        duration: duration,
+        duration: 2,
+        delay: delay,
       },
     },
   };
@@ -24,7 +26,7 @@ const aboutBlockContainer = {
   },
 
   visible: {
-    backgroundColor: "ghostwhite",
+    backgroundColor: "rgb(245, 243, 241)",
     transition: {
       type: "tween",
       duration: 2,
@@ -33,7 +35,7 @@ const aboutBlockContainer = {
   },
 };
 
-const pageVariant = (duration = 2) => {
+const pageVariant = (duration = 2, delay = 0) => {
   return {
     hidden: {
       opacity: 0,
@@ -44,12 +46,29 @@ const pageVariant = (duration = 2) => {
       transition: {
         type: "tween",
         duration: duration,
+        delay: delay,
       },
     },
   };
 };
 
+const cardHover = {
+  hover: {
+    scale: 1.1,
+    transition: {
+      type: "tween",
+      yoyo: Infinity,
+    },
+  },
+};
+
 // custom Hook to export the variants as needed
 export const useVariants = () => {
-  return { variantProps, landRVariant, aboutBlockContainer, pageVariant };
+  return {
+    variantProps,
+    cardHover,
+    landRVariant,
+    aboutBlockContainer,
+    pageVariant,
+  };
 };
