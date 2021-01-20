@@ -1,0 +1,28 @@
+.skills {
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: rgb(119, 119, 119);
+  font-family: "Open Sans", sans-serif;
+}
+
+.skills__heading {
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.skills__text {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.skills__listContainer {
+  margin-top: 2rem;
+  color: rgb(218, 165, 32);
+  cursor: pointer;
+  margin: 2rem 0;
+  font-size: 0.9rem;
+}
+.skills__listItem {
+  padding: 0.1rem 0;
+}

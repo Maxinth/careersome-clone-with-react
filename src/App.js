@@ -7,6 +7,7 @@ import { Switch, Route } from "react-router-dom";
 import Home from "./sitePages/Home";
 import About from "./sitePages/About";
 import Careers from "./sitePages/Careers";
+import Skills from "./sitePages/Skills";
 
 function App() {
   return (
@@ -23,6 +24,10 @@ function App() {
 
         <Route path="/careers">
           <Careers />
+        </Route>
+
+        <Route path="/skills">
+          <Skills />
         </Route>
       </Switch>
       <Footer />

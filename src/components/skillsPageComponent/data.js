@@ -1,0 +1,16 @@
+export default [
+  "Adaptability",
+  "Attention to detail",
+  "Critical Thinking",
+  "Effective Communication",
+  "Listening",
+  "Ability to Manage Stress",
+  "Manual Dexterity",
+  "Good Memory",
+  "Multitasking",
+  "Self-confidence",
+  "Self-control",
+  "Stamina",
+  "Team work",
+  "Time Management",
+];
