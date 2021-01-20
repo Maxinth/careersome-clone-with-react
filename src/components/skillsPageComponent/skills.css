@@ -1,9 +1,10 @@
 .skills {
   padding: 1rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 900px;
+  margin: 7rem auto;
   color: rgb(119, 119, 119);
   font-family: "Open Sans", sans-serif;
+  /* margin-top: 1rem; */
 }
 
 .skills__heading {
@@ -25,4 +26,24 @@
 }
 .skills__listItem {
   padding: 0.1rem 0;
+  transition: color 0.3s ease-in;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+  /* width: 30%; */
+}
+
+.skills__listItem:hover {
+  color: #333;
+}
+
+@media (min-width: 400px) {
+  .skills__listContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .skills__listItem {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
 }

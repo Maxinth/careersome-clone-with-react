@@ -1,0 +1,129 @@
+.definition {
+  overflow: hidden;
+}
+
+.skillDefinition {
+  /* padding: 1rem; */
+  --border: 1px solid rgb(218, 214, 214);
+  border: var(--border);
+  box-shadow: 1px 2px 8px grey;
+  font-family: "Open Sans", sans-serif;
+  transition: height 0.3s ease;
+}
+
+.skillDefinition__title {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  text-align: center;
+
+  border-bottom: var(--border);
+}
+
+.skillDefinition__cardMain {
+  position: relative;
+}
+/* .skillDefinition__cardMainContainer,
+.skillDefinition__howToBlock {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+} */
+
+/* .definition:hover .skillDefinition__cardMain {
+  height: 0;
+} */
+.skillDefinition__howToBlock {
+  padding: 2rem 0;
+}
+
+.skillDefinition__text,
+.skillDefinition__howToTexts {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  padding: 1rem 2rem;
+}
+
+.skillDefinition__howToTexts {
+  padding: 0.5rem 2rem;
+}
+
+.skillDefinition__howTo {
+  border: none;
+  outline: none;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 1rem;
+  cursor: pointer;
+  color: inherit;
+  border-top: var(--border);
+}
+
+/* REFERENCES */
+
+.skillDefinition__references {
+  margin-top: 2rem;
+}
+
+.skillDefinition__referencesTitle {
+  margin-bottom: 1rem;
+  font-size: 0.99rem;
+}
+
+.skillDefinition__referenceItem {
+  color: rgb(218, 165, 32);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* SOCIAL MEDIA ICONS */
+.skillDefinition__socialContainer {
+  margin-top: 1rem;
+}
+
+.skillDefinition__socialTitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.skillDefinition__Container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.skillDefinition__icon {
+  font-size: 2rem !important;
+}
+
+.skillDefinition__icon.add {
+  color: rgb(1, 102, 255);
+}
+
+.skillDefinition__icon.fb {
+  color: #3b5998;
+}
+
+.skillDefinition__icon.tw {
+  color: #00acee;
+}
+
+.skillDefinition__icon.wht {
+  color: green;
+}
+
+.skillDefinition__icon.li {
+  color: #0e76a8;
+}
+
+.skillDefinition__icon.tg {
+  color: rgb(61, 130, 233);
+}
+
+.skillDefinition__icon.mail {
+  color: #333;
+}
