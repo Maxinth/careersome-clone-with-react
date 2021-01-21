@@ -2,6 +2,7 @@
   overflow: hidden;
   max-width: 500px;
   margin: 0 auto;
+  transition: height 0.2s ease;
 }
 
 .skillDefinition {
@@ -71,6 +72,14 @@
   border-top: var(--border);
   background: ghostwhite;
   font-family: "Montserrat", sans-serif;
+  transition: background-color 0.3s ease-out;
+}
+
+.skillDefinition__howTo:hover {
+  background-color: rgb(240, 234, 234);
+}
+.skillDefinition__howTo:active {
+  background-color: rgb(240, 234, 234);
 }
 
 .skillDefinition__howTo > span {
@@ -97,7 +106,10 @@
 /* SOCIAL MEDIA ICONS */
 .skillDefinition__socialContainer {
   margin-top: 1rem;
-  text-align: center;
+  /* text-align: center; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
 }
 
 .skillDefinition__socialTitle {
@@ -107,7 +119,7 @@
 
 .skillDefinition__Container {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 

@@ -1,0 +1,154 @@
+.skillsSocialDropDown {
+  border: 1px solid rgb(233, 230, 230);
+  max-width: 390px;
+  box-shadow: 1px 2px 1px rgb(219, 215, 215) inset;
+  /* padding: 1rem 1rem; */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: white;
+  transition: opacity 0.1s ease-in-out, transform 0.2s ease-in,
+    position 0.3s ease;
+}
+
+.skillsSocialDropDown.inView {
+  opacity: 1;
+  transform: translateX(0%);
+  /* position: relative; */
+}
+
+.skillsSocialDropDown.hidden {
+  /* position: absolute; */
+  opacity: 0;
+
+  transform: translateX(100%);
+}
+
+.skillsSocialDropDown__main {
+  width: 100%;
+
+  border-bottom: 1px solid rgb(212, 210, 210);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 3px 1px;
+
+  /* margin-top: 0.5rem; */
+  padding: 1rem 1rem;
+}
+
+.skillsSocialDropDownText {
+  /* color: rgb(22, 19, 228); */
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.skillsSocialDropDown__container {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.5s ease-out;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+  /* padding: 0.5rem 1rem; */
+}
+
+.skillsSocialDropDown__container:hover {
+  /* background-color: rgba(226, 224, 224, 0.5); */
+  background-color: rgb(230, 230, 233);
+}
+.skillsSocialDropDown__icon {
+  font-size: 2rem !important;
+  margin-right: 0.1rem;
+}
+
+.skillsSocialDropDown__btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background: ghostwhite;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  transition: background-color 0.3s;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.skillsSocialDropDown__btn:hover {
+  background-color: rgb(240, 236, 236);
+}
+.skillsSocialDropDown__icon.add {
+  color: rgb(1, 102, 255);
+}
+
+.skillsSocialDropDown__icon.fb,
+.skillsSocialDropDown__icon.fb + .skillsSocialDropDownText {
+  color: #3b5998;
+}
+
+.skillsSocialDropDown__icon.tw,
+.skillsSocialDropDown__icon.tw + .skillsSocialDropDownText {
+  color: #00acee;
+}
+
+.skillsSocialDropDown__icon.whats,
+.skillsSocialDropDown__icon.whats + .skillsSocialDropDownText {
+  color: green;
+}
+
+.skillsSocialDropDown__icon.li,
+.skillsSocialDropDown__icon.li + .skillsSocialDropDownText {
+  color: #0e76a8;
+}
+
+.skillsSocialDropDown__icon.tg,
+.skillsSocialDropDown__icon.tg + .skillsSocialDropDownText {
+  color: rgb(61, 130, 233);
+}
+
+.skillsSocialDropDown__icon.mail,
+.skillsSocialDropDown__icon.mail + .skillsSocialDropDownText {
+  color: #333;
+}
+
+.skillsSocialDropDown__icon.pin,
+.skillsSocialDropDown__icon.pin + .skillsSocialDropDownText {
+  color: rgb(252, 84, 17);
+}
+
+.skillsSocialDropDown__icon.gmail,
+.skillsSocialDropDown__icon.gmail + .skillsSocialDropDownText {
+  color: red;
+}
+.skillsSocialDropDown__icon.reddit,
+.skillsSocialDropDown__icon.reddit + .skillsSocialDropDownText {
+  color: orange;
+}
+.skillsSocialDropDown__icon.add,
+.skillsSocialDropDown__icon.add + .skillsSocialDropDownText {
+  color: rgb(1, 102, 255);
+}
+
+@media (min-width: 900px) {
+  .skillsSocialDropDown {
+    max-width: 380px;
+  }
+  .skillsSocialDropDown__main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    gap: 1px 1px;
+  }
+
+  .skillsSocialDropDown__container {
+    /* justify-content: space-evenly; */
+  }
+}
+
+@media (min-width: 1200px) {
+  .skillsSocialDropDown {
+    max-width: 350px;
+  }
+}

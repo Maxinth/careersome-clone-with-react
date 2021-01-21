@@ -5,8 +5,19 @@ const AppContext = createContext();
 const AppProvider = ({ children }) => {
   const [sideBarOpen, setSideBarOpen] = useState(false);
   const toggleSideBar = () => setSideBarOpen(!sideBarOpen);
+  const [showDrop, setShowDrop] = useState(false);
+  const makeShowDropVisible = () => setShowDrop(true);
+  const hideDropBox = () => setShowDrop(false);
   return (
-    <AppContext.Provider value={{ sideBarOpen, toggleSideBar }}>
+    <AppContext.Provider
+      value={{
+        sideBarOpen,
+        toggleSideBar,
+        showDrop,
+        makeShowDropVisible,
+        hideDropBox,
+      }}
+    >
       {children}
     </AppContext.Provider>
   );

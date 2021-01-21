@@ -17,7 +17,7 @@ const SkillDefinition = ({
 }) => {
   const [view, setView] = useState(false);
   const toggleView = () => setView(!view);
-  const { variantProps, pageVariant, cardHover: btnHover } = useVariants();
+  const { variantProps, pageVariant } = useVariants();
 
   const titleEdit = title === "this section all about?" ? "FAQ:" : "";
 
@@ -75,9 +75,7 @@ const SkillDefinition = ({
           className="skillDefinition__howTo"
           onClick={toggleView}
         >
-          <motion.span variants={btnHover} whileHover="hover">
-            {!view ? `How to  ${infoText}` : "Back to main view"}
-          </motion.span>
+          <span>{!view ? `How to  ${infoText}` : "Back to main view"}</span>
         </button>
       </section>
 
