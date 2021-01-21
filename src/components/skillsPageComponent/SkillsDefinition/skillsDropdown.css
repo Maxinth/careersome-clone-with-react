@@ -131,6 +131,19 @@
   color: rgb(1, 102, 255);
 }
 
+.skillsSocialDropDown__icon.yt,
+.skillsSocialDropDown__icon.yt + .skillsSocialDropDownText {
+  color: red;
+}
+.skillsSocialDropDown__icon.ig,
+.skillsSocialDropDown__icon.ig + .skillsSocialDropDownText {
+  color: rgb(175, 12, 197);
+}
+.skillsSocialDropDown__icon.hub,
+.skillsSocialDropDown__icon.hub + .skillsSocialDropDownText {
+  color: rgb(70, 67, 67);
+}
+
 @media (min-width: 900px) {
   .skillsSocialDropDown {
     max-width: 380px;

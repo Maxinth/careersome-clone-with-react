@@ -1,0 +1,40 @@
+.modalDropBox {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 300;
+  cursor: pointer;
+}
+.modalSocialDropDown {
+  width: 100%;
+  margin: 5rem 0;
+  padding: 2rem 5rem;
+  /* position: relative; */
+}
+
+.modalSocialDropDown > .skillsSocialDropDown {
+  max-width: 600px;
+  margin: 0 auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: unset;
+  position: relative;
+  z-index: 500;
+}
+
+.modalSocialDropDown .skillsSocialDropDown__main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 100%;
+  padding: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  border-bottom: unset;
+}
+
+.modalSocialDropDown .skillsSocialDropDown__container {
+  /* justify-content: center; */
+}
