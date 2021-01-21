@@ -10,31 +10,56 @@
 }
 .modalSocialDropDown {
   width: 100%;
-  margin: 5rem 0;
+  margin: 5rem 0rem;
   padding: 2rem 5rem;
   /* position: relative; */
 }
 
 .modalSocialDropDown > .skillsSocialDropDown {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   box-shadow: unset;
-  position: relative;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
   z-index: 500;
+  overflow: hidden;
+  /* padding: 1rem; */
 }
 
 .modalSocialDropDown .skillsSocialDropDown__main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   width: 100%;
-  padding: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
+  padding: 2rem;
+  /* max-width: 700px; */
+  margin: 2rem auto;
   border-bottom: unset;
+  overflow: hidden;
+  gap: 20px;
 }
 
 .modalSocialDropDown .skillsSocialDropDown__container {
-  /* justify-content: center; */
+  margin-left: unset;
+
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 500px) {
+  .modalSocialDropDown .skillsSocialDropDown__main {
+    padding: 2rem;
+  }
+  .modalSocialDropDown .skillsSocialDropDown__container {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 900px) {
+  .modalSocialDropDown .skillsSocialDropDown__main {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+  }
 }

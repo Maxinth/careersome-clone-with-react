@@ -9,14 +9,14 @@ import Home from "./sitePages/Home";
 import About from "./sitePages/About";
 import Careers from "./sitePages/Careers";
 import Skills from "./sitePages/Skills";
-import ModalSocialDropDown from "./components/skillsPageComponent/SkillsDefinition/ModalSocialDropDown";
-import { useGlobalContext } from "./components/context";
+import BackDrops from "./components/BackDrops";
+
 function App() {
-  const { showModal } = useGlobalContext();
   return (
     <div className="App">
       <Navbar />
-      {showModal && <ModalSocialDropDown />}
+      <BackDrops />
+
       <Switch>
         <Route path="/" exact>
           <Home />

@@ -8,7 +8,7 @@ import NavItems from "./NavItems";
 import NavMobileSideBar from "./NavMobileSideBar";
 import { useGlobalContext } from "../context";
 const Navbar = () => {
-  const { toggleSideBar, sideBarOpen } = useGlobalContext();
+  const { toggleSideBar } = useGlobalContext();
 
   return (
     <>
@@ -30,10 +30,7 @@ const Navbar = () => {
           </ul>
         </header>
       </nav>
-      {/* show the backdrop when menu icon is toggled - bringing the sidebar into view */}
-      {sideBarOpen && (
-        <div className="nav__sideBarBackdrop" onClick={toggleSideBar}></div>
-      )}
+
       <NavJobOptions />
     </>
   );
