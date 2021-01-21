@@ -1,5 +1,7 @@
 .definition {
   overflow: hidden;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .skillDefinition {
@@ -12,10 +14,10 @@
 }
 
 .skillDefinition__title {
-  font-size: 2rem;
+  font-size: calc(1rem + 1vw);
   padding: 1rem 2rem;
   text-align: center;
-
+  color: #333;
   border-bottom: var(--border);
 }
 
@@ -44,13 +46,15 @@
   font-weight: 600;
   font-family: "Open Sans", sans-serif;
   padding: 1rem 2rem;
+  display: flex;
 }
 
 .skillDefinition__howToTexts {
-  padding: 0.5rem 2rem;
+  padding: 0.2rem 2rem;
+  margin-bottom: unset;
 }
 
-.skillDefinition__howToTexts::first-letter {
+.skillDefinition__howToTEXT::first-letter {
   text-transform: uppercase;
 }
 
@@ -60,13 +64,19 @@
   font-weight: 700;
   width: 100%;
   text-align: center;
-  padding: 1rem 0;
+  /* padding: 1rem 0; */
   font-size: 1rem;
   cursor: pointer;
-  color: inherit;
+  color: #333;
   border-top: var(--border);
+  background: ghostwhite;
+  font-family: "Montserrat", sans-serif;
 }
 
+.skillDefinition__howTo > span {
+  display: block;
+  padding: 1rem 0;
+}
 /* REFERENCES */
 
 .skillDefinition__references {
@@ -87,6 +97,7 @@
 /* SOCIAL MEDIA ICONS */
 .skillDefinition__socialContainer {
   margin-top: 1rem;
+  text-align: center;
 }
 
 .skillDefinition__socialTitle {
@@ -96,7 +107,7 @@
 
 .skillDefinition__Container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 }
 
@@ -130,4 +141,43 @@
 
 .skillDefinition__icon.mail {
   color: #333;
+}
+
+.skillDefinition__referenceListItem {
+  display: flex;
+  cursor: pointer;
+}
+
+.skillDefinition__referenceListItem:hover {
+  text-decoration: underline;
+  text-decoration-color: #333;
+}
+.skillDefinition__icon.thumbs,
+.skillDefinition__icon.beenHere {
+  font-size: 1.2rem !important;
+  color: green;
+  margin-right: 1rem;
+}
+.skillDefinition__icon.ref {
+  font-size: 0.8rem !important;
+  color: black;
+  margin-right: 0.2rem;
+}
+.skillDefinition__icon.thumbs {
+  color: #333;
+}
+
+.skillDefinition__referencesTitle {
+  text-align: center;
+}
+
+.skillDefinition__referenceList + .skillDefinition__socialContainer {
+  margin-top: 2rem;
+}
+
+@media (min-width: 1200px) {
+  .skillDefinition__title {
+    text-align: center;
+    font-size: 1.8rem;
+  }
 }

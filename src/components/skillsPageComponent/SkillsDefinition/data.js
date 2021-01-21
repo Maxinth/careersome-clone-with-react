@@ -32,8 +32,6 @@ export default {
     ],
   },
 
-
-    
   // OBJECT FOR ATTENTION TO DETAILS
   attentionToDetail: {
     title: "Attention to Detail?",
@@ -83,13 +81,11 @@ being able to do that will help you understand issues and situations better,`,
     ],
   },
 
-
-
   // OBJECT FOR COMMUNICATION
   communication: {
     title: "Effective Communication?",
     firstText: `Effective communication is a communication in which the receiver clearly understands 
-the message that the spender intended to send. Effective communication encompasses attentive listening, 
+the message that the sender intended to send. Effective communication encompasses attentive listening, 
 non-verbal communication, stress management and emotional awareness.`,
     secondText: `To be able to express yourself clearly and get a message across as 
 intended will help you achieve success in life, work and relationships, 
@@ -115,9 +111,6 @@ as it will help other people understand your`,
       `smallbiztrends.com: 20 Ways to Communicate Effectively With Your Team`,
     ],
   },
-
-
-
 
   // OBJECT FOR LISTENING
   listening: {
@@ -148,9 +141,6 @@ as it will help other people understand your`,
     ],
   },
 
-
-
-
   // OBJECT FOR STRESS MANAGEMENT
   stressManagement: {
     title: "Stress Management?",
@@ -177,7 +167,6 @@ and other practices to help deal with stress.`,
     ],
   },
 
-
   // OBJECT FOR MANUAL DEXTERITY
   manualDexterity: {
     title: "Manual Dexterity?",
@@ -194,8 +183,6 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
       `healthyliving.azcentral.com: Activities to Improve Dexterity`,
     ],
   },
-
-
 
   // OBJECT FOR MEMORY
   memory: {
@@ -223,8 +210,6 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
     ],
   },
 
-
-
   // OBJECT FOR MULTITASKING
   multitasking: {
     title: "Multitasking?",
@@ -248,17 +233,18 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
     ],
   },
 
-
-
+  // OBJECT FOR SELF CONTROL AND SELF-CONFIDENCE - 404 PAGES
+  selfConfidence: {},
+  selfControl: {},
 
   // OBJECT FOR STAMINA
   stamina: {
     title: "Stamina?",
     firstText: `Stamina is the resilient energy and strength that enables you to continue doing something for a long time. 
                 Stamina involves enduring stress when doing something and staying active for a long period of time.`,
-      secondText: `Having a good level of stamina will improve your performance at the things you do, 
+    secondText: `Having a good level of stamina will improve your performance at the things you do, 
                 as the quality will help you maintain focus and improve your general well being.`,
-                
+
     howToTexts: [
       `live a healthy lifestyle, eat, exercise and sleep well daily`,
       `think positive thoughts about yourself to make a positive influence on your subconscious mind`,
@@ -274,13 +260,10 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
     ],
   },
 
-
-
-
   // OBJECT FOR TEAMWORK
   teamwork: {
     title: "Teamwork?",
-      firstText: `Teamwork is a cooperative effort by a group or team to achieve a goal. 
+    firstText: `Teamwork is a cooperative effort by a group or team to achieve a goal. 
                     Teamwork involves two or more persons working together, supporting each other,
                     applying their different skills and personalities, and sharing their insights and perspectives to achieve a goal.`,
     secondText: `Teamwork when managed properly is a better way to work.`,
@@ -306,9 +289,6 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
     ],
   },
 
-
-
-  
   // OBJECT FOR TIME MANAGEMENT
   timeManagement: {
     title: "Time Management?",
@@ -317,27 +297,38 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
                 practices to help get more and better work done in less time.`,
     secondText: `To be able to manage your time effectively will help you reduce stress, increase productivity, become more successful in your work, a lot
                 of time management is needed.`,
-    howToTexts: [       
-        `make a list of the tasks you need to complete`,
-        `prioritize your tasks to focus on those that are more important`,
-        `break big tasks into manageable portions`,
-        `set up realistic deadlines for completing tasks`,
-        `practice self-control`,
-        `be positive, determined and persevering`,
-        `avoid procrastination at all costs`,
-        `focus on one thing at a time`,
-        `deal with difficult tasks on your most productive time of day`,
-        `review your list on a regular basis to adjust tasks or to add new ones`,
-        `delegate work to persons you trust to be reliable`,
-        `take a break to rest, relax, and rejuvenate`,
-        `reward yourself for achieving difficult tasks by planning an activity you will enjoy`,
+    howToTexts: [
+      `make a list of the tasks you need to complete`,
+      `prioritize your tasks to focus on those that are more important`,
+      `break big tasks into manageable portions`,
+      `set up realistic deadlines for completing tasks`,
+      `practice self-control`,
+      `be positive, determined and persevering`,
+      `avoid procrastination at all costs`,
+      `focus on one thing at a time`,
+      `deal with difficult tasks on your most productive time of day`,
+      `review your list on a regular basis to adjust tasks or to add new ones`,
+      `delegate work to persons you trust to be reliable`,
+      `take a break to rest, relax, and rejuvenate`,
+      `reward yourself for achieving difficult tasks by planning an activity you will enjoy`,
     ],
     infoText: "Manage your Time",
-      referenceList: [
-       ` Psychology Today: Time Management`,
-        `University of Waterloo: HOW TO MANAGE YOUR TIME EFFECTIVELY`,
-        `Study Guides and Strategies: Time management`,
+    referenceList: [
+      ` Psychology Today: Time Management`,
+      `University of Waterloo: HOW TO MANAGE YOUR TIME EFFECTIVELY`,
+      `Study Guides and Strategies: Time management`,
     ],
   },
- 
+
+  defaultView: {
+    title: "this section all about?",
+    firstText: `A very quick click on one of the colored links in the SKILLS and ATTRIBUTE section should fill you in.`,
+    secondText: `You might as well click the button below for a more proper breakdown of the drill.`,
+    howToTexts: [
+      `click on a link in the SKILLS and ATTRIBUTE section to get what the clicked skill is about`,
+      `Right after the initial click on a link of your choice, click on the button that exists at the bottom of this section to see how you can improve on the skill of your choosing`,
+      `a quick click on the button from the earlier step should revert you to the initial view`,
+    ],
+    infoText: "know more about listed skills",
+  },
 };

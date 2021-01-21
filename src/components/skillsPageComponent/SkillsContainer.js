@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import "./skills.css";
 import data from "./data";
 import SkillDefinitions from "./SkillsDefinition/SkillDefinitions";
+import definitionsData from "./SkillsDefinition/data";
+import { motion } from "framer-motion";
+import { useVariants } from "../useVariants";
+
 const SkillsContainer = () => {
+  const [skill, setSkill] = useState("");
+  // creating an array from the key properties of the definitionData object.
+  const definitionsTitleArray = Object.keys(definitionsData);
+
+  const { variantProps, pageVariant } = useVariants();
+
   return (
-    <section className="skills">
+    <motion.section
+      className="skills"
+      variants={pageVariant()}
+      {...variantProps}
+    >
       <div className="skills__container">
         <h3 className="skills__heading">Skills and Attributes</h3>
         <p className="skills__text">
@@ -13,15 +27,21 @@ const SkillsContainer = () => {
           them and tips on how to build or develop them.{" "}
         </p>
         <ul className="skills__listContainer">
-          {data.map((item) => (
-            <li key={item} className="skills__listItem">
+          {data.map((item, index) => (
+            <li
+              key={item}
+              className="skills__listItem"
+              // sets the skill to the property name that matches this index on the array
+              onClick={() => setSkill(definitionsTitleArray[index])}
+              // see SkillsDefinitions for reason
+            >
               {item}
             </li>
           ))}
         </ul>
       </div>
-      <SkillDefinitions />
-    </section>
+      <SkillDefinitions currentSkill={skill} />
+    </motion.section>
   );
 };
 

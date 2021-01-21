@@ -12,12 +12,21 @@
   font-size: 1.5rem;
   font-weight: 900;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 
+.career__heading,
+.career__text {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
 .career__text {
   font-size: 0.9rem;
   line-height: 1.6;
   font-weight: 500;
+  text-align: justify;
+  margin-top: 1rem;
 }
 
 .career__pagination,
@@ -53,7 +62,6 @@
 }
 
 .career__cards {
-  margin: 3rem 0;
   /* border: thin solid rgb(248, 242, 242); */
   padding: 2rem 2rem;
   /* background: ghostwhite; */
@@ -61,6 +69,7 @@
 
 @media (min-width: 500px) {
   .career__cards {
+    margin: 3rem 0;
     display: grid;
     grid-gap: 30px 20px;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));

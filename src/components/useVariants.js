@@ -54,7 +54,7 @@ const pageVariant = (duration = 2, delay = 0) => {
 
 const cardHover = {
   hover: {
-    scale: 1.1,
+    scale: 1.03,
     transition: {
       type: "tween",
       yoyo: Infinity,
