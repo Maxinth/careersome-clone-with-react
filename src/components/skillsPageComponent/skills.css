@@ -25,14 +25,32 @@
 }
 .skills__listItem {
   padding: 0.1rem 0;
-  transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in-out, font-weight 0.3s ease-out, transform 0.3s;
+
   font-weight: 600;
   margin-bottom: 0.2rem;
   /* width: 30%; */
 }
 
+.skills__listItem.isActive {
+  color: #333;
+  font-weight: 900;
+}
+
+.skills__listItem.isActive:hover {
+  transform: unset;
+}
 .skills__listItem:hover {
   color: #333;
+  transform: scale(1.04);
+}
+
+.skills__listItem:hover::before {
+  content: " @";
+}
+
+.skills__listItem.isActive::before {
+  content: unset;
 }
 
 @media (min-width: 400px) {

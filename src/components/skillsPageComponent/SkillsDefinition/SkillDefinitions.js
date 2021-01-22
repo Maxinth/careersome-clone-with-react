@@ -5,7 +5,6 @@ import SkillDefinition from "./SkillDefinition";
 const SkillDefinitions = ({ currentSkill }) => {
   // custom function to show SkillDefinition component corresponding to skill click
   const showWhenSkillIs = (id) => {
-   
     return currentSkill === "" ? (
       <SkillDefinition {...data["defaultView"]} />
     ) : currentSkill === id ? (
@@ -30,6 +29,8 @@ const SkillDefinitions = ({ currentSkill }) => {
               {showWhenSkillIs("manualDexterity")}
               {showWhenSkillIs("memory")}
               {showWhenSkillIs("multitasking")}
+              {showWhenSkillIs("selfConfidence")}
+              {showWhenSkillIs("selfControl")}
               {showWhenSkillIs("stamina")}
               {showWhenSkillIs("stressManagement")}
               {showWhenSkillIs("teamwork")}

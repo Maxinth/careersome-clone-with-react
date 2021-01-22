@@ -27,17 +27,21 @@ const SkillsContainer = () => {
           them and tips on how to build or develop them.{" "}
         </p>
         <ul className="skills__listContainer">
-          {data.map((item, index) => (
-            <li
-              key={item}
-              className="skills__listItem"
-              // sets the skill to the property name that matches this index on the array
-              onClick={() => setSkill(definitionsTitleArray[index])}
-              // see SkillsDefinitions for reason
-            >
-              {item}
-            </li>
-          ))}
+          {data.map((item, index) => {
+            const { name, id } = item;
+            const skillInView = skill === id ? "isActive" : "";
+            return (
+              <li
+                key={id}
+                className={`skills__listItem ${skillInView}`}
+                // sets the skill to the property name that matches this index on the array
+                onClick={() => setSkill(definitionsTitleArray[index])}
+                // see SkillsDefinitions for reason
+              >
+                {name}
+              </li>
+            );
+          })}
         </ul>
       </div>
       <SkillDefinitions currentSkill={skill} />

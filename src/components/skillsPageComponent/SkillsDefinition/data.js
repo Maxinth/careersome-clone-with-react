@@ -60,12 +60,12 @@ just like other skills such as communicating effectively and critical`,
   criticalThinking: {
     title: "Critical Thinking?",
     firstText: `Critical thinking is the act of thinking clearly and rationally to make a sound judgment.
- It involves inquiring to gather relevant information on a subject and thinking through and
-  evaluating the information gathered to make an informed decision or judgment.`,
-    secondText: `It’s important that you learn how to think critically, as 
-being able to do that will help you understand issues and situations better,`,
+                It involves inquiring to gather relevant information on a subject and thinking through and
+                evaluating the information gathered to make an informed decision or judgment.`,
+    secondText: `It’s important that you learn how to think critically, as being able to do that will help you understand issues and situations better,`,
+
     howToTexts: [
-      `  be skeptical, don’t just accept an information or issue to be true`,
+      `be skeptical, don’t just accept an information or issue to be true`,
       `be patient, avoid making quick decisions or judgments`,
       `be curious and inquiring, ask questions, get more information and look for evidence`,
       `be analytical and rational, breakdown the issue into parts, if possible and necessary, and identify the arguments and think through them`,
@@ -85,11 +85,11 @@ being able to do that will help you understand issues and situations better,`,
   communication: {
     title: "Effective Communication?",
     firstText: `Effective communication is a communication in which the receiver clearly understands 
-the message that the sender intended to send. Effective communication encompasses attentive listening, 
-non-verbal communication, stress management and emotional awareness.`,
+                the message that the sender intended to send. Effective communication encompasses attentive listening, 
+                non-verbal communication, stress management and emotional awareness.`,
     secondText: `To be able to express yourself clearly and get a message across as 
-intended will help you achieve success in life, work and relationships, 
-as it will help other people understand your`,
+                intended will help you achieve success in life, work and relationships, 
+                as it will help other people understand your`,
     howToTexts: [
       ` know when and where to start a discussion`,
       `understand what you want to communicate and the listener(s) or reader(s)`,
@@ -116,8 +116,8 @@ as it will help other people understand your`,
   listening: {
     title: "Listening?",
     firstText: `Listening is the act of focusing and paying attention on what is being said and understanding it.
- Listening is very important because it helps us connect to other people, understand what they’re saying to us, 
- avoid misunderstandings and mistakes, and improve teamwork and productivity.`,
+                Listening is very important because it helps us connect to other people, understand what they’re saying to us, 
+                avoid misunderstandings and mistakes, and improve teamwork and productivity.`,
     secondText: ``,
     howToTexts: [
       ` build your vocabulary`,
@@ -145,8 +145,8 @@ as it will help other people understand your`,
   stressManagement: {
     title: "Stress Management?",
     firstText: `Stress management is the act or process of reducing, preventing and coping with stress. 
-Stress management involves identifying the causes of stress, planning and organizing your life 
-and other practices to help deal with stress.`,
+              Stress management involves identifying the causes of stress, planning and organizing your life 
+              and other practices to help deal with stress.`,
     secondText: `It’s important that you learn how to manage stress properly.`,
     howToTexts: [
       ` know yourself and the sources of your stress`,
@@ -171,15 +171,16 @@ and other practices to help deal with stress.`,
   manualDexterity: {
     title: "Manual Dexterity?",
     firstText: `Manual dexterity is the ability to use the hands to grasp, manipulate, 
-or assemble objects. It includes good hard-eye coordination and fine motor skills.`,
+                or assemble objects. It includes good hard-eye coordination and fine motor skills.`,
     secondText: ``,
     howToTexts: [
       `Manual dexterity can be improved by performing activities that involve repetition.
-focus, hand-eye coordination and a steady hand, such as playing the piano, painting, drawing, or operating hand tools or equipment.`,
+              focus, hand-eye coordination and a steady hand, such as playing the piano, painting,
+               drawing, or operating hand tools or equipment.`,
     ],
     infoText: "improve Manual Dexterity",
     referenceList: [
-      `  springer.com: Manual Dexterity`,
+      `springer .com: Manual Dexterity`,
       `healthyliving.azcentral.com: Activities to Improve Dexterity`,
     ],
   },
@@ -188,11 +189,11 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
   memory: {
     title: "Memory?",
     firstText: `Memory is the ability to retain knowledge. The process of forming a memory involves encoding,
- storing and retrieving information. Encoding refers to process of using the senses to acquire 
- information about something and registering the information. Storage refers to the process of storing the encoded information.
-  Retrieval refers to the process of getting the stored information out of storage.`,
+              storing and retrieving information. Encoding refers to process of using the senses to acquire 
+              information about something and registering the information. Storage refers to the process of storing the encoded information.
+              Retrieval refers to the process of getting the stored information out of storage.`,
     secondText: `Having a good memory is essential for a happy and successful life, as the quality will help you retain knowledge
- and remember information when you need it. Below is our idea of how to improve your memory`,
+                and remember information when you need it. Below is our idea of how to improve your memory`,
     howToTexts: [
       `eat right`,
       `avoid multitasking to improve your ability to concentrate`,
@@ -204,7 +205,7 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
     ],
     infoText: "Improve Your Memory",
     referenceList: [
-      ` The Human Memory: WHAT IS MEMORY?`,
+      `The Human Memory: WHAT IS MEMORY?`,
       `mercola.com: 7 Tricks to Improve Your Memory`,
       `NDTV: How to Improve Memory Power - 10 Tips and Tricks`,
     ],
@@ -233,9 +234,42 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
     ],
   },
 
-  // OBJECT FOR SELF CONTROL AND SELF-CONFIDENCE - 404 PAGES
-  selfConfidence: {},
-  selfControl: {},
+  // OBJECT FOR SELF-CONFIDENCE
+  selfConfidence: {
+    title: "self-confidence?",
+    firstText: `Self-confidence is a feeling of trust in one's abilities, qualities, and judgement. In a way, it is
+               an attitude about your skills and abilities.`,
+    secondText: `It means you accept and trust yourself and have a sense of control in your life.`,
+    infoText: "improve on self-confidence",
+    howToTexts: [
+      `Stand and sit in a posture of confidence.`,
+      `Practice presence`,
+      `Build your capacity for energy`,
+      `Exercise regularly`,
+      `Visualize: Imagine - confidence`,
+      `Take risks, make mistakes and do well to learn from them.`,
+      `Clarify your goals.`,
+      `Ask for help and offer your help to others`,
+    ],
+    referenceList: [`www.positivepsychology.com`],
+  },
+
+  // OBJECT FOR SELF CONTROL
+  selfControl: {
+    title: "self-control?",
+    firstText: `Self-control is the ability to control oneself, in particular one's emotions and desires, 
+                especially in difficult situations.
+                A second school of thought has it to be the ability to regulate one's emotions, thoughts
+                and behaviors in the face of temptations and impulses.`,
+    secondText: `It majorly entails delaying gratifications and resisting  unwanted behaviors or urges.`,
+    howToTexts: [
+      `First and foremost, have a clear goal and the motivation to change.`,
+      `Track your actions towards the achievement of the goal`,
+      `Have a lot of willpower to resist urges.`,
+    ],
+    infoText: "master self-control",
+    referenceList: [`www.verywell.com`],
+  },
 
   // OBJECT FOR STAMINA
   stamina: {
@@ -264,8 +298,8 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
   teamwork: {
     title: "Teamwork?",
     firstText: `Teamwork is a cooperative effort by a group or team to achieve a goal. 
-                    Teamwork involves two or more persons working together, supporting each other,
-                    applying their different skills and personalities, and sharing their insights and perspectives to achieve a goal.`,
+                Teamwork involves two or more persons working together, supporting each other,
+                applying their different skills and personalities, and sharing their insights and perspectives to achieve a goal.`,
     secondText: `Teamwork when managed properly is a better way to work.`,
     howToTexts: [
       `know and understand your team’s goals`,
@@ -295,8 +329,9 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
     firstText: `Time management is the act or process of using time efficiently and effectively.
                 Time management involves setting goals, prioritizing tasks, scheduling activities and other
                 practices to help get more and better work done in less time.`,
-    secondText: `To be able to manage your time effectively will help you reduce stress, increase productivity, become more successful in your work, a lot
-                of time management is needed.`,
+    secondText: `To be able to manage your time effectively will help you reduce stress, 
+                 increase productivity, become more successful in your work, a lot
+                 of time management is needed.`,
     howToTexts: [
       `make a list of the tasks you need to complete`,
       `prioritize your tasks to focus on those that are more important`,
@@ -314,7 +349,7 @@ focus, hand-eye coordination and a steady hand, such as playing the piano, paint
     ],
     infoText: "Manage your Time",
     referenceList: [
-      ` Psychology Today: Time Management`,
+      `Psychology Today: Time Management`,
       `University of Waterloo: HOW TO MANAGE YOUR TIME EFFECTIVELY`,
       `Study Guides and Strategies: Time management`,
     ],

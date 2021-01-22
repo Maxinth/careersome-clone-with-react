@@ -81,20 +81,23 @@ const SkillDefinition = ({
 
       {/* REFERENCES SECTION  */}
       <section className="skillDefinition__references">
+        {/* show references when available */}
         {referenceList.length !== 0 && (
-          <h5 className="skillDefinition__referencesTitle">
-            References and Further Reading
-          </h5>
-        )}
-        <div className="skillDefinition__referenceList">
-          {referenceList.map((item, index) => (
-            <p className="skillDefinition__referenceListItem" key={index}>
-              <LocalLibraryIcon className="skillDefinition__icon ref" />
-              <span className="skillDefinition__referenceItem">{item}</span>
-            </p>
-          ))}
-        </div>
+          <>
+            <h5 className="skillDefinition__referencesTitle">
+              References and Further Reading
+            </h5>
 
+            <div className="skillDefinition__referenceList">
+              {referenceList.map((item, index) => (
+                <p className="skillDefinition__referenceListItem" key={index}>
+                  <LocalLibraryIcon className="skillDefinition__icon ref" />
+                  <span className="skillDefinition__referenceItem">{item}</span>
+                </p>
+              ))}
+            </div>
+          </>
+        )}
         {/* SOCIAL MEDIA ICONS */}
         <SkillDefinitionSocial />
       </section>

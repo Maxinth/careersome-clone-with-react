@@ -22,9 +22,10 @@
   border-top-right-radius: 20px;
   box-shadow: unset;
   position: absolute;
-  top: 60px;
+  top: 120px;
   left: 0;
   right: 0;
+
   z-index: 500;
   overflow: hidden;
   /* padding: 1rem; */
