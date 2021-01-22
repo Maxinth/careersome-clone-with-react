@@ -8,12 +8,6 @@
   z-index: 300;
   cursor: pointer;
 }
-.modalSocialDropDown {
-  width: 100%;
-  margin: 5rem 0rem;
-  padding: 2rem 5rem;
-  /* position: relative; */
-}
 
 .modalSocialDropDown > .skillsSocialDropDown {
   max-width: 700px;
@@ -25,10 +19,8 @@
   top: 120px;
   left: 0;
   right: 0;
-
   z-index: 500;
   overflow: hidden;
-  /* padding: 1rem; */
 }
 
 .modalSocialDropDown .skillsSocialDropDown__main {
