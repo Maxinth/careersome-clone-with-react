@@ -11,6 +11,7 @@ import Careers from "./sitePages/Careers";
 import Skills from "./sitePages/Skills";
 import BackDrops from "./components/BackDrops";
 import SignUp from "./sitePages/SignUp";
+import Login from "./sitePages/Login";
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
         </Route>
         <Route path="/register">
           <SignUp />
+        </Route>
+
+        <Route path="/login">
+          <Login />
         </Route>
       </Switch>
       <Footer />

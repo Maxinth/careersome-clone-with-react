@@ -1,10 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./pageForm.css";
-import data from "./data";
-const PageForm = () => {
-  const { signUp, signIn } = data;
-  const { text, signList, linkTexts } = signIn;
+
+const PageForm = ({ text, signList, linkTexts }) => {
   return (
     <section className="pageForm">
       <div className="pageForm__container">
@@ -15,6 +13,7 @@ const PageForm = () => {
               <div className="pageForm__itemContainer" key={item.id}>
                 <label htmlFor={item.id} className="pageForm__label">
                   {item.itemName}
+                  {/* render this path only on the sign in page */}
                   {item.id === "signInPassword" && (
                     <span className="pageForm__forgotPassword">
                       (
@@ -24,6 +23,7 @@ const PageForm = () => {
                       )
                     </span>
                   )}
+                  {/* end of section custom made for sigm in page */}
                 </label>
                 <input
                   type={item.inputType}
@@ -42,8 +42,8 @@ const PageForm = () => {
 
           {linkTexts.map((val, index) => (
             <p className="pageForm__text" key={index}>
-              <Link to="/" className="pageForm__link">
-                {val}
+              <Link to={val.goTo} className="pageForm__link">
+                {val.linkText}
               </Link>
             </p>
           ))}

@@ -23,7 +23,7 @@ export default {
         inputType: "password",
       },
     ],
-    linkTexts: ["Already registered ? Sign in"],
+    linkTexts: [{ linkText: "Already registered ? Sign in", goTo: "/login" }],
   },
 
   signIn: {
@@ -41,8 +41,8 @@ export default {
       },
     ],
     linkTexts: [
-      "Didn't receive confirmation message?",
-      "Dont have an account ? Sign up",
+      { linkText: "Didn't receive confirmation message?", goTo: "/" },
+      { linkText: "Dont have an account ? Sign up", goTo: "/register" },
     ],
   },
 };

@@ -16,7 +16,7 @@ const SkillsContainer = () => {
   return (
     <motion.section
       className="skills"
-      variants={pageVariant()}
+      variants={pageVariant(1)}
       {...variantProps}
     >
       <div className="skills__container">

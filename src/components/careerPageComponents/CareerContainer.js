@@ -15,7 +15,7 @@ const CareerContainer = () => {
     <motion.section
       className="career"
       {...variantProps}
-      variants={pageVariant(2)}
+      variants={pageVariant(1)}
     >
       <div className="career__container">
         <CareerMain />

@@ -70,3 +70,8 @@
 .pageForm__text {
   color: rgb(218, 165, 32);
 }
+
+.pageForm__text {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}

@@ -3,18 +3,18 @@ import PageForm from "../components/pageFormComponents/PageForm";
 import data from "../components/pageFormComponents/data";
 import { motion } from "framer-motion";
 import { useVariants } from "../components/useVariants";
-const SignUp = () => {
-  const { signUp } = data;
+const Login = () => {
   const { pageVariant, variantProps } = useVariants();
+  const { signIn } = data;
   return (
     <motion.section
-      className="signUp"
+      className="login"
       variants={pageVariant(2)}
       {...variantProps}
     >
-      <PageForm {...signUp} />
+      <PageForm {...signIn} />;
     </motion.section>
   );
 };
 
-export default SignUp;
+export default Login;

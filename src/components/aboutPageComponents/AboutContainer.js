@@ -9,7 +9,7 @@ const AboutContainer = () => {
   return (
     <motion.section
       className="about"
-      variants={pageVariant(2)}
+      variants={pageVariant(1)}
       {...variantProps}
     >
       <div className="about__container">
