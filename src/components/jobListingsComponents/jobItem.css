@@ -1,0 +1,37 @@
+.jobItem {
+  margin: 1rem 0 2rem;
+}
+
+.jobItem__container {
+  display: flex;
+  align-items: center;
+  margin: 0.2rem 0;
+}
+
+.jobItem__icon {
+  font-size: 1.2rem !important;
+  margin-right: 0.2rem;
+  color: #333;
+}
+
+.jobItem__text {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.jobItem__text.sector {
+  font-weight: 700;
+}
+.jobItem__icon.work {
+  color: rgb(45, 235, 45);
+}
+
+.jobItem__icon.location {
+  color: rgb(202, 17, 202);
+}
+
+@media (min-width: 600px) {
+  .jobItem__main {
+    display: flex;
+    justify-content: space-between;
+  }
+}

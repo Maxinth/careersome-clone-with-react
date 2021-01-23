@@ -1,0 +1,122 @@
+.jobsInfo {
+  padding: 1rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  color: rgb(119, 119, 119);
+  font-family: "Open Sans", sans-serif;
+}
+
+.jobsInfo__title {
+  color: #333;
+  margin: 1rem 0;
+}
+
+.jobsInfo__text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.jobsInfo__help {
+  color: red;
+  font-size: 0.7rem;
+  font-style: italic;
+  font-weight: 600;
+  margin: 1rem 0;
+  display: inline-block;
+}
+
+.jobsInfo__inputContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+
+.jobsInfo__label {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.jobsInfo__select,
+.jobsInfo__input {
+  padding: 0.8rem;
+  border: 1px solid rgb(240, 237, 237);
+}
+
+.jobsInfo__input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(223, 219, 219);
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.jobsInfo__input:focus {
+  border-bottom: 2px solid rgb(21, 202, 193);
+}
+.jobsInfo__sector {
+  font-family: "Raleway", sans-serif;
+}
+
+.jobsInfo__btn {
+  width: 100%;
+  padding: 0.5rem 3rem;
+  background: #333;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  margin-left: auto;
+  margin-top: 2rem;
+}
+.jobsInfo__listingsContainer {
+  margin-top: 2rem;
+}
+.jobsInfo__listings {
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid rgb(223, 223, 223);
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+}
+
+.jobsInfo__title {
+  text-align: center;
+}
+
+@media (min-width: 600px) {
+  .jobsInfo__form {
+    display: flex;
+    /* justify-content: space-between; */
+  }
+
+  /* .jobsInfo__form > * {
+    flex: 1;
+  } */
+
+  .jobsInfo__btn {
+    width: 12%;
+    padding: unset;
+    height: 30px;
+    align-self: flex-end;
+    margin-top: unset;
+  }
+
+  .jobsInfo__inputContainer {
+    margin: unset;
+    margin-right: 2rem;
+  }
+  .jobsInfo__inputContainer:first-child {
+    width: 40%;
+    flex: 1;
+  }
+
+  .jobsInfo__inputContainer:last-child {
+    width: 48%;
+    flex: 1;
+  }
+}

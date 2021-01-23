@@ -16,6 +16,7 @@
 
 .postJobs__doc {
   color: rgb(218, 165, 32);
+  cursor: pointer;
 }
 
 .postJobs__container {
