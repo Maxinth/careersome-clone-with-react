@@ -1,0 +1,72 @@
+.pageForm {
+  width: 100%;
+  padding: 1rem 2rem;
+  color: rgb(119, 119, 119);
+  font-family: "Open Sans", sans-serif;
+  margin: 2rem 0;
+}
+
+.pageForm__container {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.pageForm__title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  /* text-transform: capitalize; */
+}
+
+.pageForm__forgotPassword {
+  margin-left: 0.5rem;
+}
+
+.pageForm__itemContainer {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pageForm__label {
+  margin-bottom: 1rem;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+}
+
+.pageForm__input {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid rgb(119, 119, 119);
+  font-size: 0.9rem;
+  color: rgb(119, 119, 119);
+  padding: 0.5rem 0;
+  transition: border-bottom 0.3s ease-in-out;
+}
+
+.pageForm__input:focus {
+  border-bottom: 2px solid rgb(21, 202, 193);
+}
+
+.pageForm__btn {
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.pageForm__btn:hover {
+  background: rgb(119, 119, 119);
+  /* color: black; */
+}
+.pageForm__link,
+.pageForm__text {
+  color: rgb(218, 165, 32);
+}
