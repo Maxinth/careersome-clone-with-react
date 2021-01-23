@@ -7,6 +7,7 @@ import NavJobOptions from "./NavJobOptions";
 import NavItems from "./NavItems";
 import NavMobileSideBar from "./NavMobileSideBar";
 import { useGlobalContext } from "../context";
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const { toggleSideBar } = useGlobalContext();
 
@@ -17,14 +18,18 @@ const Navbar = () => {
         <header className="nav__header__mobile">
           <MenuIcon className="nav__menuIcon" onClick={toggleSideBar} />
           <div className="nav__logoContainer">
-            <img src={logo} alt="careerSome logo" className="nav__logo" />
+            <Link to="/">
+              <img src={logo} alt="careerSome logo" className="nav__logo" />
+            </Link>
           </div>
           <NavMobileSideBar />
         </header>
 
         {/* larger screens */}
         <header className="nav__headerLargerScreens">
-          <img src={logo} alt="careerSome logo" className="nav__logo" />
+          <Link to="/">
+            <img src={logo} alt="careerSome logo" className="nav__logo" />
+          </Link>
           <ul className="nav__items">
             <NavItems />
           </ul>

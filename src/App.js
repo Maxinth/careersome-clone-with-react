@@ -12,7 +12,7 @@ import Skills from "./sitePages/Skills";
 import BackDrops from "./components/BackDrops";
 import SignUp from "./sitePages/SignUp";
 import Login from "./sitePages/Login";
-
+import PostJobs from "./sitePages/PostJobs";
 function App() {
   return (
     <div className="App">
@@ -41,6 +41,10 @@ function App() {
 
         <Route path="/login">
           <Login />
+        </Route>
+
+        <Route path="/post-job-free">
+          <PostJobs />
         </Route>
       </Switch>
       <Footer />

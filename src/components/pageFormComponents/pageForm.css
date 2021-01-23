@@ -28,15 +28,16 @@
 }
 
 .pageForm__label {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   text-transform: capitalize;
   font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .pageForm__input {
   border: none;
   outline: none;
-  border-bottom: 2px solid rgb(119, 119, 119);
+  border-bottom: 2px solid rgb(218, 214, 214);
   font-size: 0.9rem;
   color: rgb(119, 119, 119);
   padding: 0.5rem 0;

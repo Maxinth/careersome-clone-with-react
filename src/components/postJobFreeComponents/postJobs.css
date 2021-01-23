@@ -1,0 +1,34 @@
+.postJobs {
+  padding: 1rem 2rem;
+  color: rgb(119, 119, 119);
+  font-family: "Open Sans", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.postJobs__mail {
+  margin-left: 0.5rem;
+  color: rgb(218, 165, 32);
+  text-decoration: underline;
+  text-decoration-color: #333;
+}
+
+.postJobs__doc {
+  color: rgb(218, 165, 32);
+}
+
+.postJobs__container {
+  width: 900px;
+  margin: 2rem auto 4rem;
+  /* padding: 1rem; */
+}
+.postJobs__title {
+  font-size: 1.2rem;
+}
+
+.postJobs__text {
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+}

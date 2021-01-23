@@ -18,10 +18,11 @@
     rgba(0, 0, 0, 0.12) 0px 1px 5px 0px, rgba(0, 0, 0, 0.2) 0px 3px 1px -2px; */
   box-shadow: 1px 3px 3px grey;
   /* margin-top: 2rem; */
+  border: 1px solid rgb(243, 240, 240);
 }
 
 .optionsCard:hover {
-  box-shadow: 1px 3px 10px grey;
+  /* box-shadow: 1px 3px 10px grey; */
   transform: scale(1.03);
 }
 
@@ -48,6 +49,7 @@
   align-items: center; */
   flex-direction: column;
   overflow: visible;
+  box-shadow: unset;
 
   /* margin-bottom: 6rem; */
   /* height: auto !important; */
@@ -106,7 +108,10 @@
   overflow-x: hidden;
   /* text-overflow: ellipsis; */
   height: 0px;
-  box-shadow: 1px 3px 5px grey;
+
+  box-shadow: 1px 3px 3px grey;
+  border: 1px solid rgb(243, 240, 240);
+  border-top: unset;
 }
 .optionsCard__img {
   object-fit: contain;
