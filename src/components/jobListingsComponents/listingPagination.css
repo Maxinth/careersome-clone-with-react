@@ -21,3 +21,8 @@
   color: black;
   background: #fff;
 }
+
+.jobPagination__page.active {
+  background: black;
+  color: #fff;
+}

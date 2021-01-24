@@ -1,24 +1,15 @@
-import React, { useState, useEffect, useCallback } from "react";
-import JobItem from "./JobItem";
-import JobListingPagination from "./JobListingPagination";
+import React, { useState } from "react";
 import "./jobsInfo.css";
 import data from "./jobsSectorData";
+import { motion } from "framer-motion";
+import { useVariants } from "../useVariants";
+import JobListings from "./JobListings";
 
 const JobsInfo = ({ page }) => {
-  const { pageNum, mainText, extract } = page;
+  const { jobsList } = page;
+  const { variantProps, pageVariant } = useVariants();
 
-  // state to imitate pagination.  - passing
-  // initial object as currentPage object
-  const [currentPage, setCurrentPage] = useState(page[0].page);
-
-  // console.log(currentPage);
-  const makeCurrentPage = (id) => {
-    setCurrentPage(pageNum[id]);
-    // console.log(currentPage);
-  };
-
-  const { jobsList } = currentPage;
-  // state to iterate jobsList
+  // default array which is manipulated and mapped over
   const [jobs, setJobs] = useState(jobsList);
 
   // state to track inputs
@@ -28,36 +19,34 @@ const JobsInfo = ({ page }) => {
   });
 
   const { jobSector, jobLocation } = jobOption;
+
   // btn click state
   const [searchInit, setSearchInit] = useState(false);
   const runSearch = () => setSearchInit(true);
 
+  // function to handle search
   const handleSearch = () => {
-    runSearch();
-    console.log("handleSearch");
+    runSearch(); // so the target for this click event vanishes and  the button to revert changes manifests
+
+    // spread out jobs into a new array - don't directly mutate jobs!
     const newJobs = [...jobs];
     const jobsBySectorOnly = newJobs.filter((job) => {
-      console.log("search by sector only");
+      // console.log("search by sector only");
       return jobSector === job.id;
     });
 
     const jobsByLocationOnly = newJobs.filter((job) => {
-      console.log("search by location only");
+      // console.log("search by location only");
       return jobLocation === job.location;
     });
     console.log(jobsBySectorOnly);
 
     const jobsBySectorAndLocation = jobsBySectorOnly.filter((item) => {
-      console.log("search by sector and location");
-      //   console
-      //     .log
-      //     (`for item @ ${index} entered location = ${jobLocation}
-      //      and   list item.location is ${item.location}= ${
-      //       jobLocation === item.location
-      //     }`)
-
+      // console.log("search by sector and location");
       return jobLocation === item.location;
     });
+
+    // setting jobs based on inputs entered
     if (!jobLocation && jobSector) {
       setJobs(jobsBySectorOnly);
     } else if (!jobSector && jobLocation) {
@@ -68,9 +57,10 @@ const JobsInfo = ({ page }) => {
       setJobs(jobs);
     }
 
-    console.log(jobs);
+    // console.log(jobs);
   };
 
+  // function to revert to initial view after a search
   const handleRevert = () => {
     console.log("handleRevert");
     setJobs(jobsList);
@@ -80,29 +70,14 @@ const JobsInfo = ({ page }) => {
   };
 
   return (
-    <section className="jobsInfo">
-      <h2 className="jobsInfo__title">
-        Undergraduate and Graduate Internships in Nigeria
-      </h2>
-      <p className="jobsInfo__text">
-        {mainText}. Browse for
-        {extract} jobs in Nigeria. Careersome has a database of over a hundred
-        internship Jobs. Are you searching for an internship in the following
-        Cities in Nigeria: Lagos, Kano, Ibadan, Kaduna, Port Harcourt, Benin
-        City, Maiduguri, Zaria, Aba, Jos, Ilorin, Oyo, Enugu, Abeokuta, Abuja,
-        Sokoto, Onitsha, Warri, Calabar, Katsina, Akure, Bauchi, Ebute Ikorodu,
-        Makurdi, Minna, Umuahia, Ondo, Damaturu, Ikot-Ekpene, Gombe, Jimeta,
-        Gusau, Mubi, Owerri or Shagamu? Then you are at the right place with
-        Careersome.
-      </p>
-
-      <span className="jobsInfo__help">
-        Please use the search form below to filter jobs by location and / or Job
-        Field
-      </span>
-
+    <motion.section
+      className="jobsInfo"
+      variants={pageVariant(1)}
+      {...variantProps}
+    >
       <form className="jobsInfo__form">
         <div className="jobsInfo__inputContainer">
+          {/* select box - input options */}
           <label htmlFor="jobsField" className="jobsInfo__label">
             Job Field
           </label>
@@ -140,6 +115,7 @@ const JobsInfo = ({ page }) => {
             }
           />
         </div>
+        {/* shown only when searchInit is false = initial View*/}
         {!searchInit && (
           <button
             type="button"
@@ -150,6 +126,8 @@ const JobsInfo = ({ page }) => {
             Search
           </button>
         )}
+
+        {/* shown only when searchInit is true - button view when initial button is toggled*/}
         {searchInit && (
           <button
             type="button"
@@ -162,31 +140,9 @@ const JobsInfo = ({ page }) => {
       </form>
 
       {/* JOB LISTINGS */}
-      <section className="jobsInfo__listingsContainer">
-        <h5 className="jobsInfo__title">
-          Below are the latest internship jobs in Nigeria
-        </h5>
-        <div className="jobsInfo__listings">
-          {jobs.length !== 0 ? (
-            jobs.map((item, index) => <JobItem key={index} {...item} />)
-          ) : (
-            <div className="jobsInfo__notFound">
-              <h3 className="jobsInfo__noItem">
-                No jobs match those parameters!
-              </h3>
-              <button
-                type="button"
-                className="jobsInfo__btn"
-                onClick={handleRevert}
-              >
-                Back
-              </button>
-            </div>
-          )}
-        </div>
-      </section>
-      <JobListingPagination makeCurrentPage={makeCurrentPage} />
-    </section>
+
+      <JobListings jobs={jobs} handleRevert={handleRevert} />
+    </motion.section>
   );
 };
 
