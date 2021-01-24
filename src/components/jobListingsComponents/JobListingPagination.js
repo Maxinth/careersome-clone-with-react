@@ -1,13 +1,12 @@
 import React from "react";
 import "./listingPagination.css";
-const JobListingPagination = () => {
+const JobListingPagination = ({makeCurrentPage}) => {
+  const pageNo = [1, 2, 3, 4, 5];
   return (
     <section className="jobPagination">
-      <div className="jobPagination__page">1</div>
-      <div className="jobPagination__page">2</div>
-      <div className="jobPagination__page">3</div>
-      <div className="jobPagination__page">4</div>
-      <div className="jobPagination__page">5</div>
+      {pageNo.map((item, index) => (
+        <div className="jobPagination__page" key={item} onClick={() => makeCurrentPage(index)}>{item}</div>
+      ))}
     </section>
   );
 };

@@ -3,7 +3,9 @@ import JobsInfo from "../components/jobListingsComponents/JobsInfo";
 import data from "../components/jobListingsComponents/data";
 const Internships = () => {
   const { internships } = data;
-  return <JobsInfo {...internships} />;
+  // const {pageOne}
+
+  return <JobsInfo page={{ ...internships }} />;
 };
 
 export default Internships;
