@@ -1,7 +1,82 @@
-import React from "react";
+import React, { useState } from "react";
 import JobItem from "./JobItem";
 import "./jobsInfo.css";
-const JobsInfo = ({mainText, extract, jobsList}) => {
+import data from "./jobsSectorData";
+const JobsInfo = ({ mainText, extract, jobsList }) => {
+  const [jobs, setJobs] = useState(jobsList);
+  const [jobOption, setJobOption] = useState({
+    jobSector: "",
+    jobLocation: "",
+  });
+
+  const { jobSector, jobLocation } = jobOption;
+  // btn click state
+  const [searchInit, setSearchInit] = useState(false);
+  const runSearch = () => setSearchInit(true);
+
+  const handleSearch = () => {
+    runSearch();
+    console.log("handleSearch");
+    const newJobs = [...jobs];
+    const jobsBySectorOnly = newJobs.filter((job) => {
+      console.log("search by sector only");
+      return jobSector === job.id;
+    });
+
+    const jobsByLocationOnly = newJobs.filter((job) => {
+      console.log("search by location only");
+      return jobLocation === job.location;
+    });
+    console.log(jobsBySectorOnly);
+
+    const jobsBySectorAndLocation = jobsBySectorOnly.filter((item) => {
+      console.log("search by sector and location");
+      //   console
+      //     .log
+      //     (`for item @ ${index} entered location = ${jobLocation}
+      //      and   list item.location is ${item.location}= ${
+      //       jobLocation === item.location
+      //     }`)
+
+      return jobLocation === item.location;
+    });
+    if (!jobLocation && jobSector) {
+      setJobs(jobsBySectorOnly);
+    } else if (!jobSector && jobLocation) {
+      setJobs(jobsByLocationOnly);
+    } else if (jobSector && jobLocation) {
+      setJobs(jobsBySectorAndLocation);
+    } else {
+      setJobs(jobs);
+    }
+
+    console.log(jobs);
+  };
+
+  const handleRevert = () => {
+    console.log("handleRevert");
+    setJobs(jobsList);
+    //   clear the inputs
+    setJobOption({ jobSector: "", jobLocation: "" });
+    setSearchInit(false);
+  };
+
+  // const checkInputsForValues = () => {
+  //   if (jobSector || jobLocation) {
+  //     runSearch();
+  //   } else {
+  //     return;
+  //   }
+  // };
+
+  // const handleBtnClick = () => {
+  //   checkInputsForValues();
+  //   if (searchInit) {
+  //     handleSearch();
+  //   } else {
+  //     handleRevert();
+  //   }
+  // };
   return (
     <section className="jobsInfo">
       <h2 className="jobsInfo__title">
@@ -29,40 +104,72 @@ const JobsInfo = ({mainText, extract, jobsList}) => {
           <label htmlFor="jobsField" className="jobsInfo__label">
             Job Field
           </label>
-          <select name="jobsCategory" className="jobsInfo__select">
-            <option value="" className="jobsInfo__sector"></option>
-            <option value="adminClerical" className="jobsInfo__sector">
-              Administrative / Clerical
-            </option>
-            <option value="artsMedia" className="jobsInfo__sector">
-              Arts, Media and Entertainment
-            </option>
-            <option value="customerService" className="jobsInfo__sector">
-              Customer Service
-            </option>
-            <option value="engineering" className="jobsInfo__sector">
-              Engineering
-            </option>
+          <select
+            name="jobsCategory"
+            className="jobsInfo__select"
+            value={jobOption.jobSector}
+            onChange={(e) =>
+              setJobOption({ ...jobOption, jobSector: e.target.value })
+            }
+          >
+            {data.map((item) => (
+              <option
+                value={item.val}
+                className="jobsInfo__sector"
+                key={item.val}
+              >
+                {item.title}
+              </option>
+            ))}
           </select>
         </div>
+
+        {/* inputs section */}
         <div className="jobsInfo__inputContainer">
           <label htmlFor="location" className="jobsInfo__label">
             Location
           </label>
-          <input type="text" className="jobsInfo__input" />
+          <input
+            type="text"
+            className="jobsInfo__input"
+            value={jobOption.jobLocation}
+            onChange={(e) =>
+              setJobOption({ ...jobOption, jobLocation: e.target.value })
+            }
+          />
         </div>
-        <button type="button" className="jobsInfo__btn">
-          Search
-        </button>
+        {!searchInit && (
+          <button
+            type="button"
+            className="jobsInfo__btn"
+            onClick={handleSearch}
+            disabled={!jobLocation && !jobSector}
+          >
+            Search
+          </button>
+        )}
+        {searchInit && (
+          <button
+            type="button"
+            className="jobsInfo__btn"
+            onClick={handleRevert}
+          >
+            BACK to initial view
+          </button>
+        )}
       </form>
+
+      {/* JOB LISTINGS */}
       <section className="jobsInfo__listingsContainer">
         <h5 className="jobsInfo__title">
           Below are the latest internship jobs in Nigeria
         </h5>
         <div className="jobsInfo__listings">
-          {jobsList.map((item, index) => (
-              <JobItem key={index} {...item}/>
-          ))}
+          {jobs.length !== 0 ? (
+            jobs.map((item, index) => <JobItem key={index} {...item} />)
+          ) : (
+            <h3 className="jobsInfo__noItem">No Item found</h3>
+          )}
         </div>
       </section>
     </section>

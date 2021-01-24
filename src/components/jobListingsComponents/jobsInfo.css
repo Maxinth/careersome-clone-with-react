@@ -44,11 +44,17 @@
   border: 1px solid rgb(240, 237, 237);
 }
 
+.jobsInfo__select,
+.jobsInfo__sector {
+  cursor: pointer;
+}
+
 .jobsInfo__input {
   border: none;
   outline: none;
   border-bottom: 2px solid rgb(223, 219, 219);
   transition: border-bottom 0.3s ease-in-out;
+  text-transform: capitalize;
 }
 
 .jobsInfo__input:focus {
@@ -71,6 +77,11 @@
   font-family: "Montserrat", sans-serif;
   margin-left: auto;
   margin-top: 2rem;
+  cursor: pointer;
+}
+
+.jobsInfo__btn:disabled {
+  cursor: not-allowed;
 }
 .jobsInfo__listingsContainer {
   margin-top: 2rem;

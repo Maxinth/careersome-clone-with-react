@@ -22,7 +22,6 @@ const OptionsCard = ({
   useEffect(() => {
     let initialViewHeight = initialViewRef.current.clientHeight;
 
-    console.log(initialViewHeight);
     setCardHeight(initialViewHeight);
   }, [switchCard]);
 

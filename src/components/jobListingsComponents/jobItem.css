@@ -17,6 +17,7 @@
 .jobItem__text {
   font-size: 0.8rem;
   font-weight: 600;
+  text-transform: capitalize;
 }
 .jobItem__text.sector {
   font-weight: 700;
