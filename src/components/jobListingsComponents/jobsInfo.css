@@ -16,6 +16,7 @@
   font-weight: 600;
   line-height: 1.6;
   margin-bottom: 2rem;
+  /* max-width: 100px; */
 }
 
 .jobsInfo__help {
@@ -44,6 +45,21 @@
   border: 1px solid rgb(240, 237, 237);
 }
 
+.jobsInfo__notFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.jobsInfo__notFound .jobsInfo__btn {
+  width: 50%;
+  margin-bottom: 2rem;
+  /* margin-right: auto; */
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
 .jobsInfo__select,
 .jobsInfo__sector {
   cursor: pointer;
@@ -66,6 +82,7 @@
 
 .jobsInfo__btn {
   width: 100%;
+  margin: 0 auto;
   padding: 0.5rem 3rem;
   background: #333;
   color: #fff;
@@ -80,6 +97,12 @@
   cursor: pointer;
 }
 
+.jobsInfo__noItem {
+  color: red;
+  text-align: center;
+  margin: 4rem 0;
+}
+
 .jobsInfo__btn:disabled {
   cursor: not-allowed;
 }
@@ -88,15 +111,27 @@
 }
 .jobsInfo__listings {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 3rem auto;
   border: 1px solid rgb(223, 223, 223);
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 1rem 2rem;
   border-radius: 10px;
 }
 
 .jobsInfo__title {
   text-align: center;
+}
+
+/* .jobsInfo__container .jobsInfo__text {
+  max-width: 100px;
+} */
+
+@media (min-width: 400px) {
+  .jobsInfo__notFound .jobsInfo__btn {
+    width: 25%;
+    padding: 0.5rem;
+    height: unset;
+  }
 }
 
 @media (min-width: 600px) {

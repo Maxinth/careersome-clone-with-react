@@ -14,6 +14,9 @@
   color: #333;
 }
 
+.jobItem__title {
+  color: #333;
+}
 .jobItem__text {
   font-size: 0.8rem;
   font-weight: 600;
@@ -30,9 +33,18 @@
   color: rgb(202, 17, 202);
 }
 
+.jobItem__main {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
 @media (min-width: 600px) {
   .jobItem__main {
     display: flex;
     justify-content: space-between;
+  }
+
+  .jobItem__container {
+    align-items: flex-start;
   }
 }

@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import JobItem from "./JobItem";
+import JobListingPagination from "./JobListingPagination";
 import "./jobsInfo.css";
 import data from "./jobsSectorData";
+
 const JobsInfo = ({ mainText, extract, jobsList }) => {
   const [jobs, setJobs] = useState(jobsList);
   const [jobOption, setJobOption] = useState({
@@ -61,22 +63,6 @@ const JobsInfo = ({ mainText, extract, jobsList }) => {
     setSearchInit(false);
   };
 
-  // const checkInputsForValues = () => {
-  //   if (jobSector || jobLocation) {
-  //     runSearch();
-  //   } else {
-  //     return;
-  //   }
-  // };
-
-  // const handleBtnClick = () => {
-  //   checkInputsForValues();
-  //   if (searchInit) {
-  //     handleSearch();
-  //   } else {
-  //     handleRevert();
-  //   }
-  // };
   return (
     <section className="jobsInfo">
       <h2 className="jobsInfo__title">
@@ -154,7 +140,7 @@ const JobsInfo = ({ mainText, extract, jobsList }) => {
             className="jobsInfo__btn"
             onClick={handleRevert}
           >
-            BACK to initial view
+            All Jobs.
           </button>
         )}
       </form>
@@ -168,10 +154,22 @@ const JobsInfo = ({ mainText, extract, jobsList }) => {
           {jobs.length !== 0 ? (
             jobs.map((item, index) => <JobItem key={index} {...item} />)
           ) : (
-            <h3 className="jobsInfo__noItem">No Item found</h3>
+            <div className="jobsInfo__notFound">
+              <h3 className="jobsInfo__noItem">
+                No jobs match those parameters!
+              </h3>
+              <button
+                type="button"
+                className="jobsInfo__btn"
+                onClick={handleRevert}
+              >
+                Back
+              </button>
+            </div>
           )}
         </div>
       </section>
+      <JobListingPagination />
     </section>
   );
 };
