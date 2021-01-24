@@ -1,32 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import JobItem from "./JobItem";
 import JobListingPagination from "./JobListingPagination";
 import "./jobsInfo.css";
 import data from "./jobsSectorData";
 
 const JobsInfo = ({ page }) => {
-  const { pages, mainText, extract } = page;
+  const { pageNum, mainText, extract } = page;
 
   // state to imitate pagination.  - passing
   // initial object as currentPage object
-  const [currentPage, setCurrentPage] = useState(pages[0].page);
+  const [currentPage, setCurrentPage] = useState(page[0].page);
 
-  const makeCurrentPage = (index) => {
-    console.log("index = ", index);
-    // switch (index) {
-    //   case 0:
-    //     setCurrentPage(pages[0].page);
-    //     break;
-    //   case 1:
-    //     setCurrentPage(pages[1].page);
-    //     break;
-    //   default:
-    //     setCurrentPage(pages[0].page);
-    //     break;
-    // }
-    setCurrentPage(pages[index].page);
-    console.log(currentPage);
+  // console.log(currentPage);
+  const makeCurrentPage = (id) => {
+    setCurrentPage(pageNum[id]);
+    // console.log(currentPage);
   };
+
   const { jobsList } = currentPage;
   // state to iterate jobsList
   const [jobs, setJobs] = useState(jobsList);
