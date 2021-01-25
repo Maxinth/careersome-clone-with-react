@@ -9,7 +9,7 @@ const JobsInfoMain = ({ mainText, extract }) => {
       <p className="jobsInfo__text">
         {mainText}. Browse for
         {extract} jobs in Nigeria. Careersome has a database of over a hundred
-        internship Jobs. Are you searching for an internship in the following
+        {extract} Jobs. Are you searching for an internship in the following
         Cities in Nigeria: Lagos, Kano, Ibadan, Kaduna, Port Harcourt, Benin
         City, Maiduguri, Zaria, Aba, Jos, Ilorin, Oyo, Enugu, Abeokuta, Abuja,
         Sokoto, Onitsha, Warri, Calabar, Katsina, Akure, Bauchi, Ebute Ikorodu,
