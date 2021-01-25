@@ -1,11 +1,11 @@
 import React from "react";
 import JobItem from "./JobItem";
 
-const JobListings = ({ jobs, handleRevert }) => {
+const JobListings = ({ jobs, handleRevert, listHeaderTitle }) => {
   return (
     <section className="jobsInfo__listingsContainer">
       <h5 className="jobsInfo__title">
-        Below are the latest internship jobs in Nigeria
+        Below are the latest {listHeaderTitle} in Nigeria
       </h5>
       <div className="jobsInfo__listings">
         {jobs.length !== 0 ? (

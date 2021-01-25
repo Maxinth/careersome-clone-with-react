@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { useVariants } from "../useVariants";
 import JobListings from "./JobListings";
 
-const JobsInfo = ({ page }) => {
+const JobsInfo = ({ page, listHeaderTitle }) => {
   const { jobsList } = page;
   const { variantProps, pageVariant } = useVariants();
 
@@ -141,7 +141,11 @@ const JobsInfo = ({ page }) => {
 
       {/* JOB LISTINGS */}
 
-      <JobListings jobs={jobs} handleRevert={handleRevert} />
+      <JobListings
+        jobs={jobs}
+        handleRevert={handleRevert}
+        listHeaderTitle={listHeaderTitle}
+      />
     </motion.section>
   );
 };

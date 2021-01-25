@@ -2,6 +2,8 @@ export default {
   entryLevel: {
     mainText: "Find the latest entry level and bottom level jobs in Nigeria",
     extract: "fresh graduate",
+    title: "Fresh Graduate and Entry Level Jobs in Nigeria",
+    listHeaderTitle: "fresh graduate or entry level",
     pages: [
       // page 1 data
       {

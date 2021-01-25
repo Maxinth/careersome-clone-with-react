@@ -2,6 +2,8 @@ export default {
   internships: {
     mainText: "Find paid undergraduate and graduate internships in Nigeria",
     extract: "internship jobs",
+    title: "Undergraduate and Graduate Internships in Nigeria",
+    listHeaderTitle: "internship jobs",
     pages: [
       {
         page: {

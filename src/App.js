@@ -14,6 +14,7 @@ import SignUp from "./sitePages/SignUp";
 import Login from "./sitePages/Login";
 import PostJobs from "./sitePages/PostJobs";
 import Internships from "./sitePages/Internships";
+import EntryLevel from "./sitePages/EntryLevel";
 function App() {
   return (
     <div className="App">
@@ -49,6 +50,10 @@ function App() {
         </Route>
         <Route path="/internships-in-nigeria">
           <Internships />
+        </Route>
+
+        <Route path="/entry-level-jobs">
+          <EntryLevel />
         </Route>
       </Switch>
       <Footer />
