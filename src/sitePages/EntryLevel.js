@@ -1,5 +1,4 @@
 import React from "react";
-import JobsInfo from "../components/jobListingsComponents/JobsInfo";
 import data from "../components/jobListingsComponents/entryLevelData";
 import JobsInfoMain from "../components/jobListingsComponents/JobsInfoMain";
 import JobListingPagination from "../components/jobListingsComponents/JobListingPagination";
