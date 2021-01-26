@@ -54,8 +54,9 @@
 }
 
 .nav__itemLink.active {
-  color: rgb(250, 208, 102);
-  background-color: #333;
+  /* color: rgb(250, 208, 102); */
+  color: rgb(255, 179, 0);
+  background-color: black;
 }
 @media (min-width: 280px) {
   .nav__logo {
