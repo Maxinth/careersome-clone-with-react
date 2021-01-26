@@ -6,12 +6,16 @@ import usePagination from "../components/usePagination";
 import JobPageItems from "../components/jobListingsComponents/JobPageItems";
 import { useVariants } from "../components/useVariants";
 import { motion } from "framer-motion";
-
+import useDocumentTitle from "../components/UseTitle";
 const EntryLevel = () => {
   const { entryLevel } = data;
   const { pages, mainText, extract, title } = entryLevel;
   const { pageNo, makeCurrentPage } = usePagination();
   const { pageVariant, variantProps } = useVariants();
+
+  useDocumentTitle(
+    "Find the latest entry level jobs and fresh graduate jobs in Nigeria"
+  );
   return (
     <motion.section
       className="entryLevel"

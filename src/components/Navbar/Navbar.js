@@ -2,14 +2,15 @@ import React from "react";
 import MenuIcon from "@material-ui/icons/Menu";
 import logo from "../../assets/career2.png";
 import "./navbar.css";
-
 import NavJobOptions from "./NavJobOptions";
 import NavItems from "./NavItems";
 import NavMobileSideBar from "./NavMobileSideBar";
+import NavBackDrop from "./NavBackDrop";
 import { useGlobalContext } from "../context";
 import { Link } from "react-router-dom";
+
 const Navbar = () => {
-  const { toggleSideBar } = useGlobalContext();
+  const { toggleSideBar, sideBarOpen } = useGlobalContext();
 
   return (
     <>
@@ -34,6 +35,8 @@ const Navbar = () => {
             <NavItems />
           </ul>
         </header>
+        {/* backdrop component to complement the bottom backdrop when the sideBar comes into view */}
+        {sideBarOpen && <NavBackDrop toggleSideBar={toggleSideBar} />}
       </nav>
 
       <NavJobOptions />

@@ -4,8 +4,8 @@
   /* display:flex; */
   /* transition: all 0.3s; */
   font-family: "Lato", sans-serif;
-  margin-top: 3.2rem;
-  /* box-shadow: 1px 20px 40px black; */
+  margin-top: 3.6rem;
+  transition: margin-top 0.2s;
 }
 
 .navJobOptions__listItem {
@@ -37,11 +37,17 @@
     align-items: center;
   }
 
-  .navJobOptions__listItem:first-child {
+  .navJobOptions__listItem:not(:last-child) {
     border-right: 1px solid #fff;
   }
 
   .navJobOptions__listItem:first-child .navJobOptions__link {
     padding: 0.5rem 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .navJobOptions {
+    margin-top: 3.9rem;
   }
 }

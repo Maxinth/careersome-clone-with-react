@@ -6,13 +6,14 @@ import usePagination from "../components/usePagination";
 import JobPageItems from "../components/jobListingsComponents/JobPageItems";
 import { useVariants } from "../components/useVariants";
 import { motion } from "framer-motion";
+import useDocumentTitle from "../components/UseTitle";
 
 const Internships = () => {
   const { internships } = data;
   const { pages, mainText, extract, title } = internships;
   const { pageNo, makeCurrentPage } = usePagination();
   const { pageVariant, variantProps } = useVariants();
-
+  useDocumentTitle();
   return (
     <motion.section
       className="internships"

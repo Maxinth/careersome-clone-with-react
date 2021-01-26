@@ -6,10 +6,10 @@
 
 .jobPagination__page {
   padding: 0.5rem 0.9rem;
-  border: 1px solid black;
+  border: 3px solid ghostwhite;
   border-radius: 50px;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: grey;
   color: #fff;
   cursor: pointer;
@@ -20,9 +20,11 @@
 .jobPagination__page:hover {
   color: black;
   background: #fff;
+  border: 3px solid grey;
 }
 
 .jobPagination__page.active {
-  background: black;
-  color: #fff;
+  background: rgb(255, 179, 0);
+  color: black;
+  border: 3px solid black;
 }
