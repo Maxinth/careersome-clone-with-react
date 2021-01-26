@@ -12,9 +12,7 @@ const JobListings = ({ jobs, handleRevert, listHeaderTitle }) => {
           jobs.map((item, index) => <JobItem key={index} {...item} />)
         ) : (
           <div className="jobsInfo__notFound">
-            <h3 className="jobsInfo__noItem">
-              No jobs match those parameters!
-            </h3>
+            <h3 className="jobsInfo__noItem">Sorry, No matching Jobs!</h3>
             <button
               type="button"
               className="jobsInfo__btn"

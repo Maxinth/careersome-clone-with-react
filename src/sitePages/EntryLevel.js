@@ -4,23 +4,25 @@ import data from "../components/jobListingsComponents/entryLevelData";
 import JobsInfoMain from "../components/jobListingsComponents/JobsInfoMain";
 import JobListingPagination from "../components/jobListingsComponents/JobListingPagination";
 import usePagination from "../components/usePagination";
+import JobPageItems from "../components/jobListingsComponents/JobPageItems";
+import { useVariants } from "../components/useVariants";
+import { motion } from "framer-motion";
 
 const EntryLevel = () => {
   const { entryLevel } = data;
   const { pages, mainText, extract, title } = entryLevel;
   const { pageNo, makeCurrentPage } = usePagination();
+  const { pageVariant, variantProps } = useVariants();
   return (
-    <section className="entryLevel">
+    <motion.section
+      className="entryLevel"
+      variants={pageVariant(1)}
+      {...variantProps}
+    >
       <JobsInfoMain extract={extract} mainText={mainText} title={title} />
-      <>
-        {pageNo === 0 && <JobsInfo {...entryLevel} page={pages[0].page} />}
-        {pageNo === 1 && <JobsInfo {...entryLevel} page={pages[1].page} />}
-        {pageNo === 2 && <JobsInfo {...entryLevel} page={pages[2].page} />}
-        {pageNo === 3 && <JobsInfo {...entryLevel} page={pages[3].page} />}
-        {pageNo === 4 && <JobsInfo {...entryLevel} page={pages[4].page} />}
-      </>
+      <JobPageItems pages={pages} pageNo={pageNo} pageData={entryLevel} />
       <JobListingPagination makeCurrentPage={makeCurrentPage} pageNo={pageNo} />
-    </section>
+    </motion.section>
   );
 };
 

@@ -25,7 +25,8 @@ const JobsInfo = ({ page, listHeaderTitle }) => {
   const runSearch = () => setSearchInit(true);
 
   // function to handle search
-  const handleSearch = () => {
+  const handleSearch = (e) => {
+    e.preventDefault();
     runSearch(); // so the target for this click event vanishes and  the button to revert changes manifests
 
     // spread out jobs into a new array - don't directly mutate jobs!
@@ -72,10 +73,10 @@ const JobsInfo = ({ page, listHeaderTitle }) => {
   return (
     <motion.section
       className="jobsInfo"
-      variants={pageVariant(1)}
+      variants={pageVariant(2)}
       {...variantProps}
     >
-      <form className="jobsInfo__form">
+      <form className="jobsInfo__form" onSubmit={handleSearch}>
         <div className="jobsInfo__inputContainer">
           {/* select box - input options */}
           <label htmlFor="jobsField" className="jobsInfo__label">
