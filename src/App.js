@@ -4,7 +4,7 @@ import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 import Home from "./sitePages/Home";
 import About from "./sitePages/About";
 import Careers from "./sitePages/Careers";
@@ -55,6 +55,7 @@ function App() {
         <Route path="/entry-level-jobs">
           <EntryLevel />
         </Route>
+        <Redirect from={["/career-path-test", "/blog"]} to="/" />
       </Switch>
       <Footer />
     </div>

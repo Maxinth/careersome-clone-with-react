@@ -38,23 +38,27 @@
 }
 
 .career__page {
-  background: rgb(202, 202, 204);
-  color: #333;
+  background-color: grey;
+  color: #fff;
   font-weight: 900;
-  padding: 0.5rem 0.7rem;
+  padding: 0.5rem 0.9rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border-radius: 50px;
+  font-family: "Open Sans", sans-serif;
+  border: 3px solid ghostwhite;
 }
 
 .career__page:hover {
-  background-color: rgb(129, 127, 127);
-  color: ghostwhite;
+  color: black;
+  background: #fff;
+  border: 3px solid grey;
 }
 .career__page.current {
-  background: #333;
-  color: #fff;
+  background: rgb(255, 179, 0);
+  color: black;
+  border: 3px solid black;
 }
 
 .career__page:not(:last-child) {
@@ -62,9 +66,7 @@
 }
 
 .career__cards {
-  /* border: thin solid rgb(248, 242, 242); */
   padding: 2rem 2rem;
-  /* background: ghostwhite; */
 }
 
 @media (min-width: 500px) {
@@ -82,11 +84,9 @@
 @media (min-width: 1200px) {
   .career__cards {
     display: flex;
-    /* justify-content: space-between; */
   }
   .career__cards .careerCard {
     flex: 1;
-    /* padding: 0.1rem; */
   }
 
   .career__container {

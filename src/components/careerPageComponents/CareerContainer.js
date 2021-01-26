@@ -4,6 +4,7 @@ import "./careers.css";
 import CareerMain from "./CareerMain";
 import { motion } from "framer-motion";
 import { useVariants } from "../useVariants";
+import CareerPagination from "./CareeerPagination";
 
 const CareerContainer = () => {
   const [page, setPage] = useState(1);
@@ -11,6 +12,8 @@ const CareerContainer = () => {
   const numberOfPageInView = (currentPage) => {
     return page === currentPage ? "current" : "";
   };
+
+  const makeCurrentPage = (index) => setPage(index);
   return (
     <motion.section
       className="career"
@@ -19,28 +22,18 @@ const CareerContainer = () => {
     >
       <div className="career__container">
         <CareerMain />
+
+        {/* career cards view */}
         <section className="career__cards">
           <CareerCardPage page={page} />
         </section>
+
+        {/* mock pagination section */}
         <section className="career__pagination">
-          <div
-            className={`career__page ${numberOfPageInView(1)}`}
-            onClick={() => setPage(1)}
-          >
-            1
-          </div>
-          <div
-            className={`career__page ${numberOfPageInView(2)}`}
-            onClick={() => setPage(2)}
-          >
-            2
-          </div>
-          <div
-            className={`career__page ${numberOfPageInView(3)}`}
-            onClick={() => setPage(3)}
-          >
-            3
-          </div>
+          <CareerPagination
+            makeCurrentPage={makeCurrentPage}
+            stylePageInView={numberOfPageInView}
+          />
         </section>
       </div>
     </motion.section>

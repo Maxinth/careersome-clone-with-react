@@ -6,8 +6,8 @@ const UseFulLink = ({ data }) => {
     <ul className="footer__useFulLink">
       {data.map((item, index) => (
         <li className="footer__useFulListItem" key={index}>
-          <Link className="footer__useFulItemLink" to="/">
-            {item}
+          <Link className="footer__useFulItemLink" to={item.goTo}>
+            {item.linkText}
           </Link>
         </li>
       ))}
