@@ -56,7 +56,8 @@ function App() {
           <EntryLevel />
         </Route>
 
-        <Redirect from={["/career-path-test", "/blog"]} to="/" />
+        <Redirect from="/blog" to="/" />
+        <Redirect from="/career-path-test" to="/" />
       </Switch>
       <Footer />
     </div>

@@ -40,7 +40,6 @@ const JobsInfo = ({ page, listHeaderTitle }) => {
       // console.log("search by location only");
       return jobLocation === job.location;
     });
-    console.log(jobsBySectorOnly);
 
     const jobsBySectorAndLocation = jobsBySectorOnly.filter((item) => {
       // console.log("search by sector and location");
@@ -63,7 +62,6 @@ const JobsInfo = ({ page, listHeaderTitle }) => {
 
   // function to revert to initial view after a search
   const handleRevert = () => {
-    console.log("handleRevert");
     setJobs(jobsList);
     //   clear the inputs
     setJobOption({ jobSector: "", jobLocation: "" });
