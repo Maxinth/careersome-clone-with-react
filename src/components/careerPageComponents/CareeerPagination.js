@@ -9,6 +9,7 @@ const CareerPagination = ({ makeCurrentPage, stylePageInView }) => {
           <div
             className={`career__page ${stylePageInView(index + 1)}`}
             onClick={() => makeCurrentPage(index + 1)}
+            key={index}
           >
             {item}
           </div>

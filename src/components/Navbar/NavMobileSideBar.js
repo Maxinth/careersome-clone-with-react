@@ -3,9 +3,11 @@ import NavItems from "./NavItems";
 import "./navMobileSideBar.css";
 import { useGlobalContext } from "../context";
 import CloseIcon from "@material-ui/icons/Close";
+
 const NavMobileSideBar = () => {
   const { sideBarOpen, toggleSideBar } = useGlobalContext();
   const xOffset = sideBarOpen ? "0%" : "-100%";
+
   return (
     <section
       className="mobileSideBar"

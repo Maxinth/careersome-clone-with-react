@@ -25,7 +25,7 @@ const AboutBlock = ({
       direction = "0vw";
       break;
   }
-  console.log(aboutBlockIndex);
+
   const { variantProps, landRVariant } = useVariants();
   return (
     <motion.div
